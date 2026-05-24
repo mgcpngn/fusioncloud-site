@@ -26,7 +26,8 @@
         <a href="#why">技术亮点</a>
         <a href="#pricing">价格</a>
         <a href="#faq">常见问题</a>
-        <a class="btn btn-primary" href="#pricing">立即体验</a>
+        <a href="#download">下载</a>
+        <a class="btn btn-primary" href="#download">立即下载</a>
       </nav>
     </div>
   </header>
@@ -42,7 +43,7 @@
         像访问 D 盘一样打开云端文件，无需占满硬盘、无需手动上传下载。
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="#pricing">免费开始使用</a>
+        <a class="btn btn-primary btn-lg" href="#download">免费下载使用</a>
         <a class="btn btn-ghost btn-lg" href="#features">查看全部功能</a>
       </div>
       <p class="hero-note">支持 Windows · macOS · Linux · NAS（Docker） · 凭证仅存本地不上传 · 按需下载不占满磁盘</p>
@@ -199,7 +200,7 @@
             <li>智能预取秒开预览</li>
             <li class="off">多个挂载 / 多账号并行</li>
           </ul>
-          <a class="btn btn-ghost btn-lg" href="#faq" style="width:100%;justify-content:center;">免费下载</a>
+          <a class="btn btn-ghost btn-lg" href="#download" style="width:100%;justify-content:center;">免费下载</a>
         </div>
         <div class="plan featured">
           <span class="tag">即将开放</span>
@@ -218,6 +219,53 @@
       </div>
       <p style="text-align:center;margin-top:24px;font-size:14px;color:var(--ink-faint);">
         付费方案上线后将支持支付宝付款。届时购买前请阅读 <a href="terms.html">服务协议</a> 与 <a href="refund.html">退款说明</a>。
+      </p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Download</span>
+        <h2>下载 FusionCloud</h2>
+        <p>选择你的系统，下载最新版 <b>v0.4.0</b> 安装包。凭证只存本地，按需下载不占满磁盘。</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="ic">🪟</div>
+          <h3>Windows</h3>
+          <p>Windows 10 / 11（64 位）。一键安装，自带运行时与挂载组件，无需额外依赖。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.0/FusionCloud-Setup-0.4.0-win-x64.exe">下载 Windows 安装包（x64）</a>
+        </div>
+        <div class="card">
+          <div class="ic">🐧</div>
+          <h3>Linux（.deb）</h3>
+          <p>Debian / Ubuntu / 统信 UOS 等。自带 .NET 运行时与 rclone，安装后由 systemd 自启。</p>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.0/mycloud_0.4.0_amd64.deb">x64 / amd64（.deb）</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.0/mycloud_0.4.0_arm64.deb">ARM64 / aarch64（.deb）</a>
+        </div>
+        <div class="card">
+          <div class="ic">🐳</div>
+          <h3>NAS / Docker</h3>
+          <p>适合群晖等 NAS 与服务器。下载镜像包后 <code>docker load</code> 即可运行。</p>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.0/fusioncloud-docker-0.4.0-amd64.tar.gz">Docker 镜像（amd64）</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="https://github.com/mgcpngn/fusioncloud-site/releases/tag/v0.4.0">查看全部文件 / 校验和</a>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:28px;">
+        <h4>安装方式</h4>
+        <div class="kv"><span>Windows</span><b>双击 .exe，按提示完成安装</b></div>
+        <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.0_amd64.deb</code></b></div>
+        <div class="kv"><span>Docker</span><b><code>docker load -i fusioncloud-docker-0.4.0-amd64.tar.gz</code></b></div>
+        <div class="kv"><span>运行容器</span><b><code>docker run -d --name fusioncloud -p 5174:5174 -v fc-data:/data fusioncloud:0.4.0</code></b></div>
+        <div class="kv"><span>访问</span><b>浏览器打开 <code>http://&lt;主机IP&gt;:5174</code></b></div>
+      </div>
+
+      <p style="text-align:center;margin-top:24px;font-size:14px;color:var(--ink-faint);">
+        macOS 版本正在签名公证中，敬请期待。所有安装包均提供 <code>.sha256</code> 校验文件。
+        遇到问题请查看 <a href="#faq">常见问题</a> 或联系 <a href="mailto:firejava@189.cn">firejava@189.cn</a>。
       </p>
     </div>
   </section>
@@ -247,7 +295,7 @@
       <div class="cta-band">
         <h2>让云盘，像本地磁盘一样好用</h2>
         <p>免费下载，几分钟内把你的第一个网盘挂载成本地磁盘。</p>
-        <a class="btn btn-ghost btn-lg" href="#pricing">立即免费体验</a>
+        <a class="btn btn-ghost btn-lg" href="#download">立即免费下载</a>
       </div>
     </div>
   </section>
@@ -265,6 +313,7 @@
           <ul>
             <li><a href="#features">功能特性</a></li>
             <li><a href="#how">如何使用</a></li>
+            <li><a href="#download">下载</a></li>
             <li><a href="#pricing">价格方案</a></li>
             <li><a href="#faq">常见问题</a></li>
           </ul>
