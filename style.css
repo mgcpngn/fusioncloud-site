@@ -217,3 +217,15 @@ footer a:hover { color: #fff; }
   .cta-band { padding: 40px 24px; }
   section { padding: 60px 0; }
 }
+
+/* 天翼云盘访问码醒目徽章 */
+.code-badge {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; margin: 0 0 12px; padding: 10px 12px;
+  background: #fffbeb; border: 1.5px solid #f59e0b; border-radius: 12px;
+}
+.code-badge .lbl { font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
+.code-badge .val {
+  font-size: 24px; font-weight: 800; letter-spacing: 4px; line-height: 1;
+  color: #b45309; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
