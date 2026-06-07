@@ -231,14 +231,14 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统，下载最新版 <b>v0.4.4</b> 安装包。Docker / NAS 镜像已更新至 <b>v0.4.4-dockerfix1</b>。凭证只存本地，按需下载不占满磁盘。</p>
+        <p>选择你的系统，下载最新版 <b>v0.4.7</b> 安装包。Docker / NAS 镜像已更新至 <b>v0.4.7</b>。凭证只存本地，按需下载不占满磁盘。</p>
       </div>
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
           <h3>Windows</h3>
           <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。一键安装，自带运行时与挂载组件，无需额外依赖。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.4/FusionCloud.Installer.exe">Gitee 下载（x64）</a>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.7/FusionCloud.Installer.exe">Gitee 下载（x64）</a>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -251,8 +251,9 @@
           <div class="ic">🐳</div>
           <h3>NAS / Docker</h3>
           <p>适合飞牛、群晖等 NAS 与服务器。镜像内负责挂载，NAS 文件管理器通过宿主目录查看云盘。</p>
-          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://cloud.189.cn/web/share?code=i2QjeqR3yE3e">天翼云盘下载（amd64）</a>
-          <div class="code-badge"><span class="lbl">天翼云盘访问码（打开后输入）</span><span class="val">shk8</span></div>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://cloud.189.cn/web/share?code=3iuMbqQJnuae">天翼云盘下载（amd64）</a>
+          <div class="code-badge"><span class="lbl">天翼云盘访问码（打开后输入）</span><span class="val">8oys</span></div>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:10px;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.7/fusioncloud-docker-0.4.7-amd64.tar.gz">GitHub 备用下载</a>
         </div>
       </div>
 
@@ -260,7 +261,7 @@
         <h4>安装方式</h4>
         <div class="kv"><span>Windows</span><b>双击 .exe，按提示完成安装</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.0_amd64.deb</code></b></div>
-        <div class="kv"><span>Docker</span><b><code>docker load -i fusioncloud-docker-0.4.4-dockerfix1-amd64.tar.gz</code></b></div>
+        <div class="kv"><span>Docker</span><b><code>docker load -i fusioncloud-docker-0.4.7-amd64.tar.gz</code></b></div>
         <div class="kv"><span>NAS 可见挂载</span><b>按下方教程同时映射 <code>/data</code> 与 <code>/media/MyCloud</code></b></div>
         <div class="kv"><span>访问</span><b>浏览器打开 <code>http://&lt;主机IP&gt;:5174</code></b></div>
       </div>
@@ -291,7 +292,7 @@ sudo mount --make-rshared /mnt/fusioncloud-media</code></pre>
   --security-opt apparmor:unconfined \
   -v /mnt/fusioncloud-data:/data \
   --mount type=bind,src=/mnt/fusioncloud-media,dst=/media/MyCloud,bind-propagation=rshared \
-  fusioncloud:0.4.4-dockerfix1</code></pre>
+  fusioncloud:0.4.7</code></pre>
           </div>
         </div>
         <div class="docker-result">
