@@ -231,22 +231,26 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。NAS / Docker 已更新至 <b>v0.4.9</b>，修复天翼云盘大目录媒体库漏扫，并延续群晖、飞牛、QNAP、Unraid 等 NAS 上的挂载适配。Docker 包超过 Gitee 100MB 限制，请使用 GitHub Release 或天翼云盘镜像下载。</p>
+        <p>选择你的系统下载对应安装包。Windows 与 NAS / Docker 默认下载已更新至 <b>v0.4.9</b>。Windows 0.4.9 增强反馈故障上下文与用户画像关联；NAS / Docker 0.4.9 修复天翼云盘大目录媒体库漏扫，并延续群晖、飞牛、QNAP、Unraid 等 NAS 上的挂载适配。Docker 包超过 Gitee 100MB 限制，请使用 GitHub Release 或天翼云盘镜像下载。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Docker Hotfix · 2026-06-08</span>
-          <h3>0.4.9 修复天翼云盘大目录扫描不完整</h3>
-          <p>飞牛 / NAS 影视库扫描时，如果天翼云盘目录超过服务端单页返回上限，旧版可能只枚举第一批文件。0.4.9 已按云盘返回的总数继续翻页，升级后重新扫描媒体库即可补齐后续文件。</p>
+          <span class="kicker">Windows + Docker Release · 2026-06-09</span>
+          <h3>0.4.9 已作为默认发布版本</h3>
+          <p>Windows 0.4.9 补齐反馈故障现场采集、画像跳转与管理侧上下文展示；Docker 0.4.9 修复天翼云盘大目录只枚举第一批文件的问题。新安装与升级请直接使用 0.4.9。</p>
         </div>
-        <a class="btn btn-primary" href="https://cloud.189.cn/web/share?code=yqYzauIRJBZb">下载 Docker 0.4.9</a>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.9/FusionCloud.Installer.exe">下载 Windows 0.4.9</a>
+          <a class="btn btn-ghost" href="https://cloud.189.cn/web/share?code=yqYzauIRJBZb">下载 Docker 0.4.9</a>
+        </div>
       </div>
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows</h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。一键安装，自带运行时与挂载组件，无需额外依赖。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.7/FusionCloud.Installer.exe">Gitee 下载（x64）</a>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.9</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.9 增强反馈故障上下文采集与用户画像关联，一键安装，自带运行时与挂载组件。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.9/FusionCloud.Installer.exe">Gitee 下载 0.4.9（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: dce153434d5960addbb0bbe6a4f55340f1b2de863782b80c315d621f4cf40eb5</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
