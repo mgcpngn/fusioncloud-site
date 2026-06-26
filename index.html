@@ -231,26 +231,26 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。Windows 默认下载与自动更新已更新至 <b>v0.4.12</b>；NAS / Docker 仍为 <b>v0.4.9</b>。Windows 0.4.12 是稳定版 bugfix 更新，重点提升启动进入界面、首次挂载入口识别、挂载/卸载状态同步与发布升级链路；NAS / Docker 0.4.9 修复天翼云盘大目录媒体库漏扫，并延续群晖、飞牛、QNAP、Unraid 等 NAS 上的挂载适配。Docker 包超过 Gitee 100MB 限制，请使用天翼云盘镜像下载。</p>
+        <p>选择你的系统下载对应安装包。Windows 默认下载与自动更新已更新至 <b>v0.4.13</b>；NAS / Docker 仍为 <b>v0.4.9</b>。Windows 0.4.13 针对真实挂载整理体验做了稳定性更新：网页端可批量移动/复制，写回失败和历史临时文件会更清楚地收敛，自动挂载偏好也可以取消并记住选择；NAS / Docker 0.4.9 修复天翼云盘大目录媒体库漏扫，并延续群晖、飞牛、QNAP、Unraid 等 NAS 上的挂载适配。Docker 包超过 Gitee 100MB 限制，请使用天翼云盘镜像下载。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Release · 2026-06-15</span>
-          <h3>Windows 0.4.12 已作为默认发布版本</h3>
-          <p>Windows 0.4.12 覆盖启动超时、首次挂载发现、挂载/卸载状态刷新与升级控制面修复；Docker 0.4.9 继续作为 NAS / Docker 默认下载版本，修复天翼云盘大目录只枚举第一批文件的问题。</p>
+          <span class="kicker">Windows Release · 2026-06-26</span>
+          <h3>Windows 0.4.13 已作为默认发布版本</h3>
+          <p>Windows 0.4.13 面向大量文件整理、写回失败恢复和自动挂载偏好做了专项更新；Docker 0.4.9 继续作为 NAS / Docker 默认下载版本，修复天翼云盘大目录只枚举第一批文件的问题。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.12/FusionCloud.Installer.exe">下载 Windows 0.4.12</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.13/FusionCloud.Installer.exe">下载 Windows 0.4.13</a>
           <a class="btn btn-ghost" href="https://cloud.189.cn/web/share?code=yqYzauIRJBZb">下载 Docker 0.4.9</a>
         </div>
       </div>
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.12</small></h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.12 是稳定版 bugfix 更新，一键安装，自带运行时与挂载组件。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.12/FusionCloud.Installer.exe">Gitee 下载 0.4.12（x64）</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: 291b147aa974ce5c14bf52c0831b6c0d39e5c776805a88ddf1008875f074732f</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.13</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.13 是稳定版 bugfix 更新，一键安装，自带运行时与挂载组件。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.13/FusionCloud.Installer.exe">Gitee 下载 0.4.13（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: 6fa596ed3c761d1567d830c6133048fa90225fce35f4ab8a7420245bf58e423a</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -278,6 +278,14 @@
         <div class="kv"><span>Docker</span><b><code>docker load -i fusioncloud-docker-0.4.9-amd64.tar.gz</code></b></div>
         <div class="kv"><span>NAS 可见挂载</span><b>按下方教程同时映射 <code>/data</code> 与 <code>/media/MyCloud</code></b></div>
         <div class="kv"><span>访问</span><b>浏览器打开 <code>http://&lt;主机IP&gt;:5174</code></b></div>
+      </div>
+
+      <div class="panel" style="margin-top:28px;">
+        <h4>0.4.13 的 Windows 更新</h4>
+        <div class="kv"><span>批量整理</span><b>网页文件管理器支持多选后的批量移动/复制，减少大量文件全靠资源管理器拖拽时的长时间卡顿感</b></div>
+        <div class="kv"><span>失败处理</span><b>写回失败会进入可处理状态，历史 <code>.tmp-数字</code> 临时文件不再每天反复失败上传</b></div>
+        <div class="kv"><span>自动挂载</span><b>“允许自动挂载”可以取消，并按账号记住偏好；取消后下次挂载默认不再自动勾选</b></div>
+        <div class="kv"><span>更新通道</span><b>Windows 默认下载和自动更新均指向 v0.4.13，已同步安装包校验信息</b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
@@ -398,7 +406,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
         <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>0.4.9 会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
         <details><summary>我的网盘账号和密码安全吗？</summary><p>账号登录凭证经过设备绑定加密后存储在你本机，仅本设备可解密，不会明文上传或共享。</p></details>
         <details><summary>现在收费吗？</summary><p>当前面向个人和 NAS 用户免费开放试用。多账号、跨盘和团队协作能力仍在规划与验证中，后续会先说明能力边界和适用场景，不影响当前免费试用。</p></details>
-        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.12 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型和复现步骤。</p></details>
+        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.13 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型和复现步骤。</p></details>
       </div>
     </div>
   </section>

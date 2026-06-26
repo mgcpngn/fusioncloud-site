@@ -312,6 +312,9 @@ footer a:hover { color: #fff; }
   .docker-result b { display: block; margin-bottom: 6px; }
   .release-notice { grid-template-columns: 1fr; margin-top: -12px; }
   .release-notice .btn { justify-content: center; }
+  .kv { display: block; }
+  .kv span { display: block; margin-bottom: 4px; }
+  .kv b { display: block; }
   .cta-band { padding: 40px 24px; }
   section { padding: 60px 0; }
 }
