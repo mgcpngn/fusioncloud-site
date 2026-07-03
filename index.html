@@ -231,27 +231,27 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。Windows 默认下载与自动更新已更新至 <b>v0.4.16</b>；Linux x64 / ARM64 与 NAS / Docker 当前发布版本为 <b>v0.4.14</b>。v0.4.16 集中提升挂载成功率：自动更新现在会引导一键修复 WinFsp 驱动，挂载失败给出明确中文提示，网络抖动自动重试不再误报失败。Docker 包超过 Gitee 单资产限制，使用公开 GitHub 镜像下载。</p>
+        <p>选择你的系统下载对应安装包。Windows 默认下载与自动更新已更新至 <b>v0.4.17</b>；NAS / Docker amd64 当前发布版本为 <b>v0.4.17</b>；Linux x64 / ARM64 当前发布版本为 <b>v0.4.14</b>。v0.4.17 修复启动时反复提示历史上传失败、夸克容量不足写回失败无法清理的问题，并延续 0.4.16 的挂载成功率专项修复。Docker 包超过 Gitee 单资产限制，使用公开 GitHub 镜像下载。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Release · 2026-07-02</span>
-          <h3>0.4.16 已作为 Windows 发布版本（挂载成功率专项修复）</h3>
-          <p>0.4.16 修复了自动更新后云盘驱动（WinFsp）无法升级导致挂载持续失败的问题——程序会在托盘提示并一键完成修复；同时挂载失败原因给出明确中文提示、云端瞬时故障自动重试、弱网首次挂载不再被 30 秒超时误杀。Linux 与 Docker 继续提供 0.4.14 安装包。</p>
+          <span class="kicker">Windows / Docker Release · 2026-07-03</span>
+          <h3>0.4.17 已作为 Windows 自动更新与 Docker amd64 发布版本</h3>
+          <p>0.4.17 修复了两个容易反复打扰用户的问题：用户确认清理后，启动时不再重复显示历史上传失败；夸克空间不足导致的写回失败会进入可清理的失败状态，不再一直显示等待重试且无法删除。Linux 继续提供 0.4.14 安装包。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.16/FusionCloud.Installer.exe">下载 Windows 0.4.16</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.17/FusionCloud.Installer.exe">下载 Windows 0.4.17</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.14/mycloud_0.4.14_amd64.deb">下载 Linux 0.4.14</a>
-          <a class="btn btn-ghost" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.14/fusioncloud-docker-0.4.14-amd64.tar.gz">下载 Docker 0.4.14</a>
+          <a class="btn btn-ghost" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.17/fusioncloud-docker-0.4.17-amd64.tar.gz">下载 Docker 0.4.17</a>
         </div>
       </div>
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.16</small></h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.16 是稳定版更新，一键安装，自带运行时与挂载组件。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.16/FusionCloud.Installer.exe">Gitee 下载 0.4.16（x64）</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: dd28f2de7a11bebef044886b7b5481781d060ce2492b9dff2668c6526717e9af</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.17</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.17 是稳定版更新，一键安装，自带运行时与挂载组件。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.17/FusionCloud.Installer.exe">Gitee 下载 0.4.17（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: 667f31e3f9616a688b33b1e272191f3cf718681f5245de7a511bb2dab40f281e</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -264,12 +264,12 @@
         </div>
         <div class="card">
           <div class="ic">🐳</div>
-          <h3>NAS / Docker <small style="font-size:14px;color:var(--ink-faint);">v0.4.14</small></h3>
-          <p>适合飞牛、群晖、QNAP、Unraid 等 NAS 与服务器。0.4.14 包含天翼云盘家庭共享空间读取链路，并按 NAS 运行环境自动选择 rclone 挂载。</p>
-          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.14/fusioncloud-docker-0.4.14-amd64.tar.gz">GitHub 镜像下载（amd64）</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:10px;" href="mailto:firejava@189.cn?subject=FusionCloud%20Docker%200.4.14%20download">下载失败请联系我</a>
-          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;word-break:break-all;">SHA256: af612b569d82b1db50108f9c3235234d7e71cf589dead65895075f6df74ffec3</p>
-          <p style="font-size:13px;color:var(--ink-faint);margin:12px 0 0;">包大小约 174.6 MB，超过 Gitee 单资产限制，Docker 包使用公开 GitHub 镜像下载。</p>
+          <h3>NAS / Docker <small style="font-size:14px;color:var(--ink-faint);">v0.4.17</small></h3>
+          <p>适合飞牛、群晖、QNAP、Unraid 等 NAS 与服务器。0.4.17 包含本次历史上传失败清理与夸克写回失败处理修复，并按 NAS 运行环境自动选择 rclone 挂载。</p>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://github.com/mgcpngn/fusioncloud-site/releases/download/v0.4.17/fusioncloud-docker-0.4.17-amd64.tar.gz">GitHub 镜像下载（amd64）</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:10px;" href="mailto:firejava@189.cn?subject=FusionCloud%20Docker%200.4.17%20download">下载失败请联系我</a>
+          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;word-break:break-all;">SHA256: 1003dc0a4fc4a95c51277321a7021459b10530be9265de3e9b5d639dd63542f4</p>
+          <p style="font-size:13px;color:var(--ink-faint);margin:12px 0 0;">包大小约 174.5 MB，超过 Gitee 单资产限制，Docker 包使用公开 GitHub 镜像下载。</p>
         </div>
       </div>
 
@@ -277,17 +277,17 @@
         <h4>安装方式</h4>
         <div class="kv"><span>Windows</span><b>双击 .exe，按提示完成安装</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.14_amd64.deb</code></b></div>
-        <div class="kv"><span>Docker</span><b><code>docker load -i fusioncloud-docker-0.4.14-amd64.tar.gz</code></b></div>
+        <div class="kv"><span>Docker</span><b><code>docker load -i fusioncloud-docker-0.4.17-amd64.tar.gz</code></b></div>
         <div class="kv"><span>NAS 可见挂载</span><b>按下方教程同时映射 <code>/data</code> 与 <code>/media/MyCloud</code></b></div>
         <div class="kv"><span>访问</span><b>浏览器打开 <code>http://&lt;主机IP&gt;:5174</code></b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.16 的挂载成功率专项修复（Windows）</h4>
-        <div class="kv"><span>驱动修复</span><b>自动更新后云盘驱动（WinFsp）过旧/缺失时，托盘提示并一键完成修复，挂载不再持续失败</b></div>
-        <div class="kv"><span>失败提示</span><b>挂载失败给出明确中文原因（盘符占用、访问被拒等），不再显示英文错误代码</b></div>
-        <div class="kv"><span>稳定性</span><b>云端瞬时故障自动重试不打扰；弱网首次挂载等待延长，不再被 30 秒超时误杀</b></div>
-        <div class="kv"><span>更新通道</span><b>Windows 默认下载和自动更新均指向 v0.4.16；Linux / Docker 当前版本为 v0.4.14，通过下载区手动升级</b></div>
+        <h4>0.4.17 的上传失败清理与挂载稳定性修复</h4>
+        <div class="kv"><span>历史提示清理</span><b>用户确认清理后，启动时不再反复显示已经处理过的上传失败历史</b></div>
+        <div class="kv"><span>夸克写回</span><b>夸克空间不足或容量受限导致的写回失败会进入可清理失败状态，不再一直等待重试</b></div>
+        <div class="kv"><span>挂载稳定性</span><b>继续包含 0.4.16 的 WinFsp 修复、明确中文失败提示和弱网首次挂载等待优化</b></div>
+        <div class="kv"><span>更新通道</span><b>Windows 默认下载和自动更新均指向 v0.4.17；Docker amd64 指向 v0.4.17；Linux 当前版本为 v0.4.14</b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
@@ -334,7 +334,7 @@ sudo mount --make-rshared /mnt/fusioncloud-media</code></pre>
   --security-opt apparmor:unconfined \
   -v /mnt/fusioncloud-data:/data \
   --mount type=bind,src=/mnt/fusioncloud-media,dst=/media/MyCloud,bind-propagation=rshared \
-  fusioncloud:0.4.14</code></pre>
+  fusioncloud:0.4.17</code></pre>
           </div>
         </div>
         <div class="docker-result">
@@ -372,7 +372,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
   --security-opt apparmor:unconfined \
   -v /volume1/docker/fusioncloud/data:/data \
   --mount type=bind,src=/volume1/fusioncloud-media,dst=/media/MyCloud,bind-propagation=rshared \
-  fusioncloud:0.4.14</code></pre>
+  fusioncloud:0.4.17</code></pre>
           </div>
         </div>
         <div class="docker-result">
@@ -412,10 +412,10 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
         <details><summary>支持对象存储吗？</summary><p>支持。FusionCloud 可挂载天翼云 ZOS / OOS、阿里云 OSS、AWS S3 及各类 S3 兼容对象存储（如 MinIO、Cloudflare R2），并陆续支持腾讯云 COS、华为云 OBS、WebDAV / SFTP 等，把存储桶当作本地磁盘直接读写。</p></details>
         <details><summary>挂载后会把所有文件下载到电脑上吗？</summary><p>不会。FusionCloud 采用按需下载，文件仅在你打开时才从云端获取，并使用本地缓存加速，不会占满你的硬盘空间。</p></details>
         <details><summary>支持哪些操作系统？</summary><p>正式支持 Windows 10/11 与 Windows Server（2016 / 2019 / 2022 及更早的老版本均可，天翼云电脑等云主机环境同样适用）、Linux 桌面端（Debian/Ubuntu/UOS 等，含 ARM64），以及 NAS / 服务器（通过 Docker 部署）。macOS 目前提供 <b>Apple Silicon 实验性预览版</b>（未签名、需 macFUSE，挂载尚在打磨中），可在下载区体验。移动端在规划中。</p></details>
-        <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>0.4.14 会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
+        <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>Docker 版会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
         <details><summary>我的网盘账号和密码安全吗？</summary><p>账号登录凭证经过设备绑定加密后存储在你本机，仅本设备可解密，不会明文上传或共享。</p></details>
         <details><summary>现在收费吗？</summary><p>当前面向个人和 NAS 用户免费开放试用。多账号、跨盘和团队协作能力仍在规划与验证中，后续会先说明能力边界和适用场景，不影响当前免费试用。</p></details>
-        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.16 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型和复现步骤。</p></details>
+        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.17 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型和复现步骤。</p></details>
       </div>
     </div>
   </section>
