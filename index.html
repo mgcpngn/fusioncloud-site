@@ -231,16 +231,16 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.21</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
+        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.22</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Stable Release · 2026-07-09</span>
-          <h3>Windows 0.4.21 修复版已发布</h3>
-          <p>0.4.21 修复 Excel 在挂载盘"另存为"新文件不上传的问题，并为杀毒/索引扫描增加常开缓存预算，取代 0.4.19/0.4.20。自动更新从灰度比例开始放量。Linux 与 Docker 下载入口继续提供 0.4.18。RPM 与 macOS 安装包不在本次发布范围内。</p>
+          <span class="kicker">Stable Release · 2026-07-16</span>
+          <h3>Windows 0.4.22 挂载性能版已发布</h3>
+          <p>0.4.22 重点改善从 Windows 挂载盘打开、播放和定位云端文件时的等待感。同一台电脑、同一测试文件的冷缓存实测中，天翼云盘读取速度提升 20.2%，百度网盘非会员提升 51.4%，夸克 SVIP 提升 20.9%；同时保留 0.4.21 的 Office 保存与扫描保护修复。实际速度仍受网络、云盘服务状态和账号等级影响，FusionCloud 不会绕过云盘会员权益。Linux 与 Docker 下载入口继续提供 0.4.18。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.21/FusionCloud.Installer.exe">下载 Windows 0.4.21</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.22/FusionCloud.Installer.exe">下载 Windows 0.4.22</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_amd64.deb">下载 Linux 0.4.18</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.18">查看 Docker 分片</a>
         </div>
@@ -248,10 +248,10 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.21</small></h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.21 是当前推荐稳定版，一键安装，自带运行时与挂载组件。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.21/FusionCloud.Installer.exe">Gitee 下载 0.4.21（x64）</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: d10455c6dbe0eebc31c2aa9287f95e3e53dfaf05df73bdb12a43de207c3f503e</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.22</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.22 是当前推荐稳定版，一键安装，自带运行时与挂载组件。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.22/FusionCloud.Installer.exe">Gitee 下载 0.4.22（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: 9534a552f12ea0b3abb618622074d8d8789237661a5f2289102da838ab2af12d</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -286,11 +286,13 @@
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.21 的 Windows 挂载盘修复</h4>
-        <div class="kv"><span>扫描保护</span><b>降低杀毒软件、索引器等高扇出读取挂载云盘时的缓存占用和读路径阻塞风险</b></div>
-        <div class="kv"><span>Office 保存</span><b>修复 Excel 通过夸克挂载盘快速连续保存时可能丢失最新保存内容或残留临时文件的问题</b></div>
-        <div class="kv"><span>当前下载</span><b>Windows 推荐下载 v0.4.21；0.4.19/0.4.20 不再作为推荐版本提供</b></div>
-        <div class="kv"><span>更新通道</span><b>Windows 自动更新从灰度比例开始放量；Linux 与 Docker 下载入口保持 v0.4.18；macOS 与 RPM 不在本次发布范围内</b></div>
+        <h4>0.4.22 的 Windows 挂载盘体验提升</h4>
+        <div class="kv"><span>打开更快</span><b>渐进缓存会优先满足正在打开或定位的文件区间，减少等待整段预读完成造成的卡顿</b></div>
+        <div class="kv"><span>实测提升</span><b>同机冷缓存测试：天翼云盘 +20.2%，百度网盘非会员 +51.4%，夸克 SVIP +20.9%</b></div>
+        <div class="kv"><span>播放与定位</span><b>测试视频的首帧、连续播放和尾部定位均通过；百度网盘冷启动首帧由最长 84.5 秒降至约 1.5 秒</b></div>
+        <div class="kv"><span>账号边界</span><b>云盘服务商仍决定会员等级、带宽和限速；FusionCloud 会说明账号性能边界，但不会绕过或模拟会员权益</b></div>
+        <div class="kv"><span>稳定性</span><b>继续包含 0.4.21 的 Office 连续保存与杀毒/索引扫描保护修复</b></div>
+        <div class="kv"><span>更新通道</span><b>Windows 自动更新先按 5% 灰度放量；Linux 与 Docker 下载入口保持 v0.4.18；macOS 与 RPM 不在本次发布范围内</b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
@@ -418,7 +420,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
         <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>Docker 版会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
         <details><summary>我的网盘账号和密码安全吗？</summary><p>账号登录凭证经过设备绑定加密后存储在你本机，仅本设备可解密，不会明文上传或共享。</p></details>
         <details><summary>现在收费吗？</summary><p>当前面向个人和 NAS 用户免费开放试用。多账号、跨盘和团队协作能力仍在规划与验证中，后续会先说明能力边界和适用场景，不影响当前免费试用。</p></details>
-        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.21 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型和复现步骤。</p></details>
+        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.22 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型、账号等级和复现步骤。</p></details>
       </div>
     </div>
   </section>
