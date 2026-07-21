@@ -231,16 +231,16 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.22</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
+        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.24</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
           <span class="kicker">Stable Release · 2026-07-21</span>
-          <h3>Windows 0.4.22 保持当前推荐版本</h3>
-          <p>0.4.23 在部分 Windows 电脑上可能无法启动系统挂载服务并提示 1053，自动更新现已暂停，暂不推荐新安装。我们正在完成 0.4.24 的最终安装验证；通过后再逐步开放。Linux 与 Docker 下载入口继续提供 0.4.18。</p>
+          <h3>Windows 0.4.24 系统挂载服务启动修复</h3>
+          <p>0.4.24 修复部分电脑安装后系统挂载服务无法启动并提示 1053 的问题，并增加重复安装、服务重启和卸载残留验收。Windows 先以小范围灰度开放；Linux 与 Docker 下载入口继续提供 0.4.18。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.22/FusionCloud.Installer.exe">下载 Windows 0.4.22</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.24/FusionCloud.Installer.exe">下载 Windows 0.4.24</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_amd64.deb">下载 Linux 0.4.18</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.18">查看 Docker 分片</a>
         </div>
@@ -248,10 +248,10 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.22</small></h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.22 是当前推荐稳定版，一键安装，自带运行时与挂载组件。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.22/FusionCloud.Installer.exe">Gitee 下载 0.4.22（x64）</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: 9534a552f12ea0b3abb618622074d8d8789237661a5f2289102da838ab2af12d</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.24</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.24 修复系统挂载服务启动 1053，并要求安装成功同时满足 SCM、精确 ImagePath、健康接口和版本检查。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.24/FusionCloud.Installer.exe">Gitee 下载 0.4.24（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: c85b4a4a12dde20e1201f6319bf6d52835f111909608b36650e4de381f40070c</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -287,9 +287,9 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>Windows 当前发布状态</h4>
-        <div class="kv"><span>推荐版本</span><b>0.4.22 保持全量稳定推荐，继续包含挂载盘打开、播放、定位、Office 保存与扫描保护改进</b></div>
-        <div class="kv"><span>0.4.23</span><b>因部分电脑出现系统挂载服务启动失败（1053），自动更新已暂停，不再作为推荐下载</b></div>
-        <div class="kv"><span>0.4.24</span><b>正在进行最终安装包与系统服务生命周期验证；验证通过后从小范围逐步开放</b></div>
+        <div class="kv"><span>推荐版本</span><b>0.4.24 Windows 小范围灰度开放，修复系统挂载服务启动 1053，并包含重复安装、服务重启与卸载残留保护</b></div>
+        <div class="kv"><span>0.4.23</span><b>不再推荐；部分电脑安装后可能出现系统挂载服务启动失败（1053）</b></div>
+        <div class="kv"><span>0.4.24</span><b>已通过最终安装包与系统服务生命周期 live 验证，先按 Windows 灰度策略开放；Linux 与 Docker 仍为 v0.4.18</b></div>
         <div class="kv"><span>其他平台</span><b>Linux 与 Docker 下载入口保持 v0.4.18；macOS 与 RPM 不在本次发布范围内</b></div>
       </div>
 
