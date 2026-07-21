@@ -231,16 +231,16 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.23</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
+        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.22</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Stable Release · 2026-07-18</span>
-          <h3>Windows 0.4.23 系统级挂载与远端同步版已发布</h3>
-          <p>0.4.23 让挂载盘同时出现在普通桌面、管理员程序和 Windows 服务中，可用于 Everything 文件夹索引，也支持由管理员创建 Windows 网络共享。夸克网盘网页端变更会在挂载盘中刷新，随后从本地保存不再因旧状态重复生成文件或报写入冲突。Linux 与 Docker 下载入口继续提供 0.4.18。</p>
+          <span class="kicker">Stable Release · 2026-07-21</span>
+          <h3>Windows 0.4.22 保持当前推荐版本</h3>
+          <p>0.4.23 在部分 Windows 电脑上可能无法启动系统挂载服务并提示 1053，自动更新现已暂停，暂不推荐新安装。我们正在完成 0.4.24 的最终安装验证；通过后再逐步开放。Linux 与 Docker 下载入口继续提供 0.4.18。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.23/FusionCloud.Installer.exe">下载 Windows 0.4.23</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.22/FusionCloud.Installer.exe">下载 Windows 0.4.22</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_amd64.deb">下载 Linux 0.4.18</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.18">查看 Docker 分片</a>
         </div>
@@ -248,10 +248,10 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.23</small></h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.23 是当前推荐稳定版，一键安装，自带运行时与挂载组件。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.23/FusionCloud.Installer.exe">Gitee 下载 0.4.23（x64）</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">大小: 86,209,112 字节 · SHA256: cab168b0f0e68035d5366a6e2ac8a7678baf127fddfe517e6ddc7e2121f7d4e5</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.22</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.22 是当前推荐稳定版，一键安装，自带运行时与挂载组件。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.22/FusionCloud.Installer.exe">Gitee 下载 0.4.22（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: 9534a552f12ea0b3abb618622074d8d8789237661a5f2289102da838ab2af12d</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -286,13 +286,11 @@
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.23 的 Windows 挂载与同步改进</h4>
-        <div class="kv"><span>多权限可见</span><b>同一个挂载盘可从普通桌面、管理员程序和 Windows 服务中访问，不再因程序权限不同而消失</b></div>
-        <div class="kv"><span>Everything</span><b>在 Everything 的“文件夹”索引中添加挂载盘，即可搜索云盘文件；首次扫描速度取决于目录数量和网络状态</b></div>
-        <div class="kv"><span>网络共享</span><b>管理员可按 Windows 的共享和权限策略，把挂载盘创建为局域网只读或读写共享；FusionCloud 不会自动开放永久共享</b></div>
-        <div class="kv"><span>夸克远端同步</span><b>网页端修改或替换文件后，挂载盘会刷新到远端新状态；之后从本地再次保存不会再重复生成同名文件或报旧状态冲突</b></div>
-        <div class="kv"><span>性能与稳定性</span><b>继续包含 0.4.22 的打开、播放和定位性能改进，以及 Office 连续保存与扫描保护修复</b></div>
-        <div class="kv"><span>更新通道</span><b>Windows 0.4.23 自动更新已全量开放；Linux 与 Docker 下载入口保持 v0.4.18；macOS 与 RPM 不在本次发布范围内</b></div>
+        <h4>Windows 当前发布状态</h4>
+        <div class="kv"><span>推荐版本</span><b>0.4.22 保持全量稳定推荐，继续包含挂载盘打开、播放、定位、Office 保存与扫描保护改进</b></div>
+        <div class="kv"><span>0.4.23</span><b>因部分电脑出现系统挂载服务启动失败（1053），自动更新已暂停，不再作为推荐下载</b></div>
+        <div class="kv"><span>0.4.24</span><b>正在进行最终安装包与系统服务生命周期验证；验证通过后从小范围逐步开放</b></div>
+        <div class="kv"><span>其他平台</span><b>Linux 与 Docker 下载入口保持 v0.4.18；macOS 与 RPM 不在本次发布范围内</b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
@@ -420,7 +418,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
         <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>Docker 版会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
         <details><summary>我的网盘账号和密码安全吗？</summary><p>账号登录凭证经过设备绑定加密后存储在你本机，仅本设备可解密，不会明文上传或共享。</p></details>
         <details><summary>现在收费吗？</summary><p>当前面向个人和 NAS 用户免费开放试用。多账号、跨盘和团队协作能力仍在规划与验证中，后续会先说明能力边界和适用场景，不影响当前免费试用。</p></details>
-        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息，Windows 0.4.23 提交问题时会自动带上脱敏诊断摘要。你也可以通过页面底部邮箱联系我，描述系统版本、使用平台、网盘类型、账号等级和复现步骤。</p></details>
+        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息。提交问题时请说明 Windows 版本、FusionCloud 版本、是否出现系统挂载服务 1053，并附上程序生成的脱敏诊断包；你也可以通过页面底部邮箱联系我。</p></details>
       </div>
     </div>
   </section>
