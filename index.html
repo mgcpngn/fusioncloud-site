@@ -98,11 +98,11 @@
         <p>下载半天、来回上传、文件散在好几个网盘里——这些麻烦，FusionCloud 帮你一次解决。</p>
       </div>
       <div class="grid grid-3">
-        <div class="card"><div class="ic">💽</div><h3>几个 TB 的网盘，不再撑爆你的小硬盘</h3><p>笔记本只有 256G、512G，却有好几 TB 的网盘？挂载后文件只在你打开时才下载，平时几乎不占本地空间——网盘再大，硬盘也不会满。</p></div>
+        <div class="card"><div class="ic">💽</div><h3>几个 TB 的网盘，不再撑爆你的小硬盘</h3><p>笔记本只有 256G、512G，却有好几 TB 的网盘？挂载后文件按需下载；图片预览缓存有容量上限和磁盘余量保护，也可随时关闭或清理，不会把整个网盘同步到本地。</p></div>
         <div class="card"><div class="ic">🗂️</div><h3>天翼、百度、夸克，都在「此电脑」里</h3><p>不用再为找一个文件挨个打开网页和客户端。每个网盘各成一个盘符并排显示，找文件、搬文件、整理资料，跟管理本地文件夹一模一样。</p></div>
         <div class="card"><div class="ic">📝</div><h3>云端文档双击就改，存一下就同步</h3><p>云盘里的 Word / Excel / PPT 直接打开编辑，Ctrl+S 自动存回云端。告别「先下载、改完再上传」，也不用再担心忘了传、或传错了版本。</p></div>
-        <div class="card"><div class="ic">⚡</div><h3>不开网页、不等加载，文件随点随开</h3><p>在资源管理器里像本地文件一样双击打开，照片缩略图、文档预览几乎不用等。再也不用忍受网页版的卡顿、广告和限速。</p></div>
-        <div class="card"><div class="ic">🔒</div><h3>账号凭证只在你自己电脑里</h3><p>很多挂载工具要把你的网盘登录凭证上传到它的服务器。FusionCloud 不会——凭证经设备绑定加密、只存本机，我们的服务器从不接触，卸载即清除。</p></div>
+        <div class="card"><div class="ic">⚡</div><h3>看过的图片，再打开少等一遍</h3><p>符合缓存条件的图片首次预览后会保存在本地；再次打开时优先读取缓存，重启 FusionCloud 后也能继续复用。默认清理 45 天未访问内容，并提供容量、磁盘余量和手动清理设置。</p></div>
+        <div class="card"><div class="ic">🔒</div><h3>账号凭证只在你自己电脑里</h3><p>很多挂载工具要把你的网盘登录凭证上传到它的服务器。FusionCloud 不会——凭证经设备绑定加密、只存本机，我们的服务器从不接触；删除账号时会同时清理该账号对应的预览缓存。</p></div>
         <div class="card"><div class="ic">🪣</div><h3>企业的 S3 / OSS 存储桶，也能当盘用</h3><p>对象存储一向要靠命令行或开发工具才能访问。挂成盘符后，团队成员直接拖拽上传下载，运维和协作都省事——NAS、服务器场景同样适用。</p></div>
         <div class="card"><div class="ic">🔄</div><h3>传完没有、传失败了怎么办，一眼看清</h3><p>系统提示「复制完成」不等于云端真的写完了。FusionCloud 把后台上传的进度、速率和剩余时间持续显示出来；万一某个文件没传上去或和云端起了冲突，可以在「写入问题」里一键重试、保留云端版本或两份都留——关机前还没传完，也会先提醒你。</p></div>
         <div class="card"><div class="ic">🎬</div><h3>不只是 Office，什么软件都能直接打开云端文件</h3><p>因为是真正的本地盘符，Photoshop、剪辑软件、CAD、看图工具、代码编辑器都能直接打开云盘里的文件，按需下载、改完存回。不用先把整个文件下载到本地，再翻出软件来打开。</p></div>
@@ -164,13 +164,13 @@
       <div class="section-head" style="margin-bottom:40px;">
         <span class="kicker" style="color:#8ea2ff;">Privacy First</span>
         <h2 style="color:#fff;">你的云盘凭证，永远不离开你的设备</h2>
-        <p style="color:#b8c2e6;">挂载所需的登录凭证只保存在你本机、并经设备绑定加密。我们的服务器从不存储、不接触你的网盘账号或访问令牌（token）——没有凭证上云，自然没有被泄露或被盗用的风险。</p>
+        <p style="color:#b8c2e6;">挂载所需的登录凭证只保存在你本机、并经设备绑定加密。我们的服务器不存储、不接触你的网盘账号或访问令牌（token），从源头减少集中托管带来的风险；你仍需保护本机账号、磁盘和系统安全。</p>
       </div>
       <div class="grid grid-2" style="max-width:920px;margin:0 auto;">
         <div class="card" style="background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.35);">
           <div class="ic" style="background:rgba(34,197,94,.18);">🛡️</div>
           <h3 style="color:#fff;">FusionCloud 的做法</h3>
-          <p style="color:#c7d2fe;">凭证仅存本地、设备绑定加密 · 服务器零接触你的 token · 卸载即清除 · 你始终掌握自己的账号。</p>
+          <p style="color:#c7d2fe;">凭证仅存本地、设备绑定加密 · 服务器零接触你的 token · 删除账号可清理对应凭证与预览缓存 · 你始终掌握自己的账号。</p>
         </div>
         <div class="card" style="background:rgba(255,95,87,.06);border-color:rgba(255,95,87,.28);">
           <div class="ic" style="background:rgba(255,95,87,.16);">⚠️</div>
@@ -231,66 +231,108 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>选择你的系统下载对应安装包。Windows 当前推荐版本为 <b>v0.4.24</b>；Linux x64 / ARM64、NAS / Docker amd64 当前推荐版本仍为 <b>v0.4.18</b>。Docker 包超过 Gitee 单附件限制，按分片下载后合并校验。</p>
+        <p>稳定版 <b>v0.4.25</b> 覆盖 Windows x64、Linux x64 / ARM64 与 NAS / Docker amd64 / arm64。手动下载与 Windows 客户端内置自动更新均全量开放。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Stable Release · 2026-07-21</span>
-          <h3>Windows 0.4.24 系统挂载服务启动修复</h3>
-          <p>0.4.24 修复部分电脑安装后系统挂载服务无法启动并提示 1053 的问题，并增加重复安装、服务重启和卸载残留验收。Windows 现已全量开放；Linux 与 Docker 下载入口继续提供 0.4.18。</p>
+          <span class="kicker">Stable Release · 2026-07-23</span>
+          <h3>0.4.25 图片预览持久缓存与安装体验增强</h3>
+          <p>符合条件的图片首次预览后可在本机持久复用，减少重复等待；默认清理 45 天未访问内容，容量上限 8 GiB，并保留至少 5 GiB 磁盘余量，用户可关闭、调整或立即清理。Windows 安装包内置 FusionCloud 图标，升级时会保留用户为桌面快捷方式设置的自定义图标。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.24/FusionCloud.Installer.exe">下载 Windows 0.4.24</a>
-          <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_amd64.deb">下载 Linux 0.4.18</a>
-          <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.18">查看 Docker 分片</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/FusionCloud.Installer.exe">下载 Windows 0.4.25</a>
+          <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">下载 Linux 0.4.25</a>
+          <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.25">查看 Docker 分片</a>
         </div>
       </div>
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.24</small></h3>
-          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。0.4.24 修复系统挂载服务启动 1053，并要求安装成功同时满足 SCM、精确 ImagePath、健康接口和版本检查。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.24/FusionCloud.Installer.exe">Gitee 下载 0.4.24（x64）</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: c85b4a4a12dde20e1201f6319bf6d52835f111909608b36650e4de381f40070c</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.25</small></h3>
+          <p>Windows 10 / 11，以及 Windows Server 2016 / 2019 / 2022 及更早版本（64 位）。包含持久图片预览缓存、缓存状态与清理设置、内置应用图标，并在升级时保留桌面快捷方式的自定义图标。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/FusionCloud.Installer.exe">Gitee 下载 0.4.25（x64）</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">SHA256: ef42ed39352c31647b0d6179f6a80a3c31a402fa6869c8fa59d8821ec7c33006</p>
+          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">当前安装包未提供 Authenticode 数字签名，Windows 可能显示安全提示；请从本页链接下载并核对 SHA256。</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
-          <h3>Linux <small style="font-size:14px;color:var(--ink-faint);">v0.4.18</small></h3>
-          <p>Debian / Ubuntu / 统信 UOS 等。自带 .NET 运行时与 rclone，安装后由 systemd 自启；x64 与 ARM64 均已提供 .deb 和 tar 包。</p>
-          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_amd64.deb">Gitee · x64 .deb</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_linux-amd64.tar.gz">Gitee · x64 tar.gz</a>
-          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_arm64.deb">Gitee · ARM64 .deb</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/mycloud_0.4.18_linux-arm64.tar.gz">Gitee · ARM64 tar.gz</a>
+          <h3>Linux <small style="font-size:14px;color:var(--ink-faint);">v0.4.25</small></h3>
+          <p>Debian / Ubuntu / 统信 UOS 等。自带 .NET 运行时与 rclone，安装后由 systemd 自启；x64 与 ARM64 均提供 .deb、tar.gz 及独立安装 / 卸载脚本。本次稳定版不发布 RPM。</p>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">Gitee · x64 .deb</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_linux-amd64.tar.gz">Gitee · x64 tar.gz</a>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_arm64.deb">Gitee · ARM64 .deb</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_linux-arm64.tar.gz">Gitee · ARM64 tar.gz</a>
+          <p style="font-size:12px;line-height:1.8;margin:10px 0 0;">
+            安装脚本：<a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/install-linux-amd64.sh">x64</a> · <a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/install-linux-arm64.sh">ARM64</a><br>
+            卸载脚本：<a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/uninstall-linux-amd64.sh">x64</a> · <a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/uninstall-linux-arm64.sh">ARM64</a>
+          </p>
+          <details style="margin-top:10px;font-size:12px;color:var(--ink-faint);word-break:break-all;">
+            <summary style="cursor:pointer;font-weight:700;">查看 Linux 资产 SHA256</summary>
+            <p style="line-height:1.7;">
+              <code>mycloud_0.4.25_amd64.deb</code>: 0c45864583e4c1e5e60f8081a2e892967db12f6db423965e04c4dfc0b10f18d5<br>
+              <code>mycloud_0.4.25_linux-amd64.tar.gz</code>: 9222dc98391863d9721e7090e369139cbb774f4b19f8448528318d2d76f3c4c9<br>
+              <code>install-linux-amd64.sh</code>: 4041c4d2a0773c3f9329ee8c8bcf5994075b3984b3dcc3a1aa4a042f0fc0802c<br>
+              <code>uninstall-linux-amd64.sh</code>: e7f63f63f0be627ad16aff4453edc1482eb9fca4ba743377389ee6e66b605015<br>
+              <code>mycloud_0.4.25_arm64.deb</code>: 38756021b7c3be9105fa2c446c22ba723555f44568ab2a83d8a97b893957a556<br>
+              <code>mycloud_0.4.25_linux-arm64.tar.gz</code>: 9a5c0295825873ea04b4f596a83816f9333b77fd6662caa464ddf680316391fc<br>
+              <code>install-linux-arm64.sh</code>: e095fb17f1d7ea7288f873a0a11d00f9323dcd9c4994b7bd597e4478343b3cbb<br>
+              <code>uninstall-linux-arm64.sh</code>: e7f63f63f0be627ad16aff4453edc1482eb9fca4ba743377389ee6e66b605015
+            </p>
+          </details>
         </div>
         <div class="card">
           <div class="ic">🐳</div>
-          <h3>NAS / Docker <small style="font-size:14px;color:var(--ink-faint);">v0.4.18</small></h3>
-          <p>适合飞牛、群晖、QNAP、Unraid 等 NAS 与服务器。0.4.18 包含对象存储、WebDAV 和 NAS rclone 挂载路径验证。</p>
-          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/fusioncloud-0.4.18-docker-amd64.tar.gz.part01">下载 part01</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/fusioncloud-0.4.18-docker-amd64.tar.gz.part02">下载 part02</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/fusioncloud-0.4.18-docker-amd64.tar.gz.part03">下载 part03</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:10px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.18/fusioncloud-0.4.18-docker-amd64.tar.gz.sha256">下载 SHA256 校验文件</a>
-          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;word-break:break-all;">完整包 SHA256: c9592db729f240d4de318fa1e8f5201d1f597a085d7f926639dbdbb0ec7fc825</p>
-          <p style="font-size:13px;color:var(--ink-faint);margin:12px 0 0;">完整包约 174.7 MB，因 Gitee 单附件限制拆为 3 个分片；三个分片下载到同一目录后再合并。</p>
+          <h3>NAS / Docker <small style="font-size:14px;color:var(--ink-faint);">v0.4.25</small></h3>
+          <p>适合飞牛、群晖、QNAP、Unraid 等 NAS 与服务器。amd64 与 arm64 各拆为两个连续分片；请只合并同一架构的 part01 / part02。</p>
+          <p style="font-size:13px;font-weight:800;margin:8px 0;">amd64</p>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-amd64.tar.gz.part01">amd64 · part01</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-amd64.tar.gz.part02">amd64 · part02</a>
+          <p style="font-size:12px;line-height:1.8;margin:4px 0 12px;">
+            分片校验：<a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-amd64.tar.gz.part01.sha256">part01</a> · <a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-amd64.tar.gz.part02.sha256">part02</a> · <a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-amd64.tar.gz.sha256">完整包</a>
+          </p>
+          <p style="font-size:13px;font-weight:800;margin:8px 0;">arm64</p>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-arm64.tar.gz.part01">arm64 · part01</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:8px;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-arm64.tar.gz.part02">arm64 · part02</a>
+          <p style="font-size:12px;line-height:1.8;margin:4px 0 12px;">
+            分片校验：<a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-arm64.tar.gz.part01.sha256">part01</a> · <a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-arm64.tar.gz.part02.sha256">part02</a> · <a href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/fusioncloud-docker-0.4.25-arm64.tar.gz.sha256">完整包</a>
+          </p>
+          <details style="font-size:12px;color:var(--ink-faint);word-break:break-all;">
+            <summary style="cursor:pointer;font-weight:700;">查看 Docker 分片与完整包 SHA256</summary>
+            <p style="line-height:1.7;">
+              <code>amd64 part01</code>: 5f73e3881c5a89a89ec91ca75134f7bf02c8d90a6ce28a8e833c97bff51dc617<br>
+              <code>amd64 part01.sha256</code>: 6d26f148bd89629d0ac3ee34aba77bb45aedf5d6e2fdff8186f5c574d8765f50<br>
+              <code>amd64 part02</code>: 161d398176e96dcafe83edfa6be1c917ad7bdcac67504688977ab8989ba481dc<br>
+              <code>amd64 part02.sha256</code>: c683ad8c0f5df52c431d78ea4a4e90a47602329a67ead94006a7333132951df5<br>
+              <code>amd64 完整包 .sha256 文件</code>: 4a05dc8ed72063dd7ec6eca99c0e3f817c49ad991f9f9d38bea6e90f28aa53cd<br>
+              <code>amd64 完整包</code>: 93fdadb368dbe535dcc164adb750d68f9e93ba3744ce1e47291abb91981c0472<br>
+              <code>arm64 part01</code>: f0fa811a6b09ef99810606c440257f3548b1477d46f0201f8347f56100ebbab5<br>
+              <code>arm64 part01.sha256</code>: 5052a667d498683ca021f59aa97309254125a2b42935b274c23805d653c184da<br>
+              <code>arm64 part02</code>: cdb52989f51bd98af9aeddbd58c31bd978ab86d621110727ca0de2841d6ff2bc<br>
+              <code>arm64 part02.sha256</code>: eb998ebc5df48c01c406a29f26a5f3e6cf48508c4b31310492688405cf2b0111<br>
+              <code>arm64 完整包 .sha256 文件</code>: bdc2fc26f24e9163b9c60a016203bcf254f19736d7d24cb27b3d2d80df52c161<br>
+              <code>arm64 完整包</code>: a983d5eb5fcc930686c15074d2781bb255dcfa37425665b29ae71b9d65ec6bf8
+            </p>
+          </details>
         </div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
         <h4>安装方式</h4>
         <div class="kv"><span>Windows</span><b>双击 .exe，按提示完成安装</b></div>
-        <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.18_amd64.deb</code></b></div>
-        <div class="kv"><span>Docker</span><b><code>cat fusioncloud-0.4.18-docker-amd64.tar.gz.part01 fusioncloud-0.4.18-docker-amd64.tar.gz.part02 fusioncloud-0.4.18-docker-amd64.tar.gz.part03 &gt; fusioncloud-0.4.18-docker-amd64.tar.gz</code></b></div>
-        <div class="kv"><span>Docker 校验</span><b><code>sha256sum -c fusioncloud-0.4.18-docker-amd64.tar.gz.sha256 &amp;&amp; docker load -i fusioncloud-0.4.18-docker-amd64.tar.gz</code></b></div>
+        <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.25_amd64.deb</code>（ARM64 请使用对应 arm64 文件）</b></div>
+        <div class="kv"><span>Linux 脚本</span><b>下载与系统架构一致的 <code>install-linux-*.sh</code>，核对 SHA256 后执行</b></div>
+        <div class="kv"><span>Docker 合并</span><b><code>cat fusioncloud-docker-0.4.25-amd64.tar.gz.part01 fusioncloud-docker-0.4.25-amd64.tar.gz.part02 &gt; fusioncloud-docker-0.4.25-amd64.tar.gz</code></b></div>
+        <div class="kv"><span>Docker 校验</span><b><code>sha256sum -c fusioncloud-docker-0.4.25-amd64.tar.gz.sha256 &amp;&amp; docker load -i fusioncloud-docker-0.4.25-amd64.tar.gz</code>（ARM64 将文件名中的 amd64 替换为 arm64）</b></div>
         <div class="kv"><span>NAS 可见挂载</span><b>按下方教程同时映射 <code>/data</code> 与 <code>/media/MyCloud</code></b></div>
         <div class="kv"><span>访问</span><b>浏览器打开 <code>http://&lt;主机IP&gt;:5174</code></b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>Windows 当前发布状态</h4>
-        <div class="kv"><span>推荐版本</span><b>0.4.24 Windows 已全量开放，修复系统挂载服务启动 1053，并包含重复安装、服务重启与卸载残留保护</b></div>
-        <div class="kv"><span>0.4.23</span><b>不再推荐；部分电脑安装后可能出现系统挂载服务启动失败（1053）</b></div>
-        <div class="kv"><span>0.4.24</span><b>已通过最终安装包与系统服务生命周期 live 验证，Windows 自动更新已全量开放；Linux 与 Docker 仍为 v0.4.18</b></div>
-        <div class="kv"><span>其他平台</span><b>Linux 与 Docker 下载入口保持 v0.4.18；macOS 与 RPM 不在本次发布范围内</b></div>
+        <h4>0.4.25 发布范围与可用状态</h4>
+        <div class="kv"><span>手动下载</span><b>Windows、Linux x64 / ARM64、Docker amd64 / arm64 的 0.4.25 资产均已全量开放</b></div>
+        <div class="kv"><span>Windows 自动更新</span><b>0.4.25 已全量开放；所有符合升级条件的 Windows 客户端都可发现并下载本版本</b></div>
+        <div class="kv"><span>macOS</span><b>不属于本次 0.4.25 稳定版；页面下方只保留旧版 Apple Silicon 实验性预览入口</b></div>
+        <div class="kv"><span>RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
@@ -329,6 +371,7 @@ sudo mount --make-rshared /mnt/fusioncloud-media</code></pre>
           </div>
           <div class="docker-step">
             <b>3. 运行容器时映射真正的挂载出口</b>
+            <p>以下示例使用 amd64 镜像；ARM64 NAS 请把最后一行改为 <code>fusioncloud:0.4.25-arm64</code>。</p>
             <pre><code>docker run -d --name fusioncloud \
   --restart unless-stopped \
   -p 5174:5174 \
@@ -337,7 +380,7 @@ sudo mount --make-rshared /mnt/fusioncloud-media</code></pre>
   --security-opt apparmor:unconfined \
   -v /mnt/fusioncloud-data:/data \
   --mount type=bind,src=/mnt/fusioncloud-media,dst=/media/MyCloud,bind-propagation=rshared \
-  fusioncloud:0.4.18</code></pre>
+  fusioncloud:0.4.25-amd64</code></pre>
           </div>
         </div>
         <div class="docker-result">
@@ -367,6 +410,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
           </div>
           <div class="docker-step">
             <b>3. 用共享文件夹启动容器</b>
+            <p>以下示例使用 amd64 镜像；ARM64 群晖请把最后一行改为 <code>fusioncloud:0.4.25-arm64</code>。</p>
             <pre><code>docker run -d --name fusioncloud \
   --restart unless-stopped \
   -p 5174:5174 \
@@ -375,7 +419,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
   --security-opt apparmor:unconfined \
   -v /volume1/docker/fusioncloud/data:/data \
   --mount type=bind,src=/volume1/fusioncloud-media,dst=/media/MyCloud,bind-propagation=rshared \
-  fusioncloud:0.4.18</code></pre>
+  fusioncloud:0.4.25-amd64</code></pre>
           </div>
         </div>
         <div class="docker-result">
@@ -385,8 +429,8 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
       </div>
 
       <div style="margin-top:28px;background:#fff7ed;border:1px solid #fcd9a5;border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow);">
-        <h4 style="margin:0 0 6px;color:#b45309;font-size:16px;font-weight:800;">🍎 macOS（实验性预览版 · Apple Silicon）</h4>
-        <p style="margin:0 0 16px;font-size:14px;color:var(--ink-soft);">面向愿意尝鲜的用户，挂载体验仍在打磨中，建议先体验、勿用于重要数据。安装前请了解以下几点：</p>
+        <h4 style="margin:0 0 6px;color:#b45309;font-size:16px;font-weight:800;">🍎 macOS（旧版实验性预览 · 不属于 0.4.25 稳定版）</h4>
+        <p style="margin:0 0 16px;font-size:14px;color:var(--ink-soft);">本次 0.4.25 不发布 macOS 稳定包。下方保留的是旧版 0.4.0 Apple Silicon 实验性入口，仅面向愿意尝鲜的用户；挂载体验仍在打磨中，请勿用于重要数据。</p>
         <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #f1e3cf;font-size:15px;"><span style="color:var(--ink-soft);flex:0 0 84px;">适用机型</span><b style="color:var(--ink);text-align:right;">仅 Apple Silicon（M1/M2/M3…），暂不支持 Intel Mac · 需 macOS 12 以上</b></div>
         <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #f1e3cf;font-size:15px;"><span style="color:var(--ink-soft);flex:0 0 84px;">首次打开</span><b style="color:var(--ink);text-align:right;">未签名，需在终端执行 <code>xattr -dr com.apple.quarantine /Applications/MyCloud.app</code> 解除隔离</b></div>
         <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #f1e3cf;font-size:15px;"><span style="color:var(--ink-soft);flex:0 0 84px;">挂载依赖</span><b style="color:var(--ink);text-align:right;">需安装 <a href="https://macfuse.github.io/" target="_blank" rel="noopener">macFUSE</a>，并在「系统设置 → 隐私与安全性」中放行</b></div>
@@ -413,12 +457,12 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
       <div class="faq">
         <details open><summary>FusionCloud 支持哪些网盘？</summary><p>目前支持天翼云盘、百度网盘、夸克网盘，后续将持续接入更多网盘服务。</p></details>
         <details><summary>支持对象存储吗？</summary><p>支持。FusionCloud 可挂载天翼云 ZOS / OOS、阿里云 OSS、AWS S3 及各类 S3 兼容对象存储（如 MinIO、Cloudflare R2），并陆续支持腾讯云 COS、华为云 OBS、WebDAV / SFTP 等，把存储桶当作本地磁盘直接读写。</p></details>
-        <details><summary>挂载后会把所有文件下载到电脑上吗？</summary><p>不会。FusionCloud 采用按需下载，文件仅在你打开时才从云端获取，并使用本地缓存加速，不会占满你的硬盘空间。</p></details>
-        <details><summary>支持哪些操作系统？</summary><p>正式支持 Windows 10/11 与 Windows Server（2016 / 2019 / 2022 及更早的老版本均可，天翼云电脑等云主机环境同样适用）、Linux 桌面端（Debian/Ubuntu/UOS 等，含 ARM64），以及 NAS / 服务器（通过 Docker 部署）。macOS 目前提供 <b>Apple Silicon 实验性预览版</b>（未签名、需 macFUSE，挂载尚在打磨中），可在下载区体验。移动端在规划中。</p></details>
+        <details><summary>挂载后会把所有文件下载到电脑上吗？图片缓存会占多少空间？</summary><p>不会。FusionCloud 按需读取文件，不会把整个网盘同步到本地。0.4.25 会为符合条件且已预览的图片保留本地缓存，默认清理 45 天未访问内容，容量上限 8 GiB，并在磁盘剩余空间接近 5 GiB 时停止继续写入；你可在设置中关闭、调整或立即清理。删除账号会清理该账号对应的缓存。普通文件删除不等同于取证安全擦除，详细说明请见<a href="privacy.html">隐私政策</a>。</p></details>
+        <details><summary>支持哪些操作系统？</summary><p>0.4.25 稳定版支持 Windows 10/11 与 Windows Server（2016 / 2019 / 2022 及更早的老版本均可，天翼云电脑等云主机环境同样适用）、Linux 桌面端（Debian/Ubuntu/UOS 等，含 ARM64），以及 NAS / 服务器（Docker amd64 / arm64）。macOS 不属于本次稳定版，下载区仅保留旧版 <b>Apple Silicon 实验性预览</b>（未签名、需 macFUSE，挂载尚在打磨中）。移动端在规划中。</p></details>
         <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>Docker 版会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
         <details><summary>我的网盘账号和密码安全吗？</summary><p>账号登录凭证经过设备绑定加密后存储在你本机，仅本设备可解密，不会明文上传或共享。</p></details>
         <details><summary>现在收费吗？</summary><p>当前面向个人和 NAS 用户免费开放试用。多账号、跨盘和团队协作能力仍在规划与验证中，后续会先说明能力边界和适用场景，不影响当前免费试用。</p></details>
-        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息。提交问题时请说明 Windows 版本、FusionCloud 版本、是否出现系统挂载服务 1053，并附上程序生成的脱敏诊断包；你也可以通过页面底部邮箱联系我。</p></details>
+        <details><summary>试用过程中如何反馈问题？</summary><p>下载区保留了校验信息。提交问题时请说明操作系统与 FusionCloud 版本、使用的平台和架构、问题发生前后的操作，并附上程序生成的脱敏诊断包；图片预览问题还可说明首次打开、再次打开或重启后打开的表现。你也可以通过页面底部邮箱联系我。</p></details>
       </div>
     </div>
   </section>
