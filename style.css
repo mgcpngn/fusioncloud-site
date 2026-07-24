@@ -63,6 +63,8 @@ img { max-width: 100%; }
   border: 1px solid transparent; cursor: pointer; transition: transform .12s ease, box-shadow .12s ease;
 }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn[aria-disabled="true"] { cursor: not-allowed; opacity: .72; pointer-events: none; }
+.btn[aria-disabled="true"]:hover { transform: none; box-shadow: none; }
 .btn-primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; box-shadow: 0 10px 24px -10px rgba(79, 107, 255, .8); }
 .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); }
 .btn-lg { padding: 15px 30px; font-size: 16px; }
