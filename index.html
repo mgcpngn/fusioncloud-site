@@ -231,16 +231,16 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p><b>v0.4.25</b> 的 Windows 修复安装包现已全量发布，版本号仍为 0.4.25，不是 0.4.26。0.4.24 及更早版本可自动升级；修复发布前已经安装旧 0.4.25 的电脑会判断为同版本，需从本页手工下载并覆盖安装一次。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 资产保持不变。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
+        <p><b>v0.4.25</b> 的 Windows 手工下载与自动更新已暂停。我们确认该安装包在没有系统级 .NET 8 的电脑上可能无法启动挂载服务，失败恢复后还可能只留下诊断日志；launcher 也存在异常响应导致退出的问题。请不要继续安装或反复重试 Windows 0.4.25。修复将作为新的 Windows v0.4.26 发布，Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 的 0.4.25 资产不受影响。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Repair Release · 2026-07-24</span>
-          <h3>修复后的 Windows 0.4.25 已全量发布（不是 0.4.26）</h3>
-          <p>新的 0.4.25 安装包已完成真实覆盖安装、独占文件锁自动恢复、服务与挂载恢复、用户数据保护和自定义快捷方式图标保留验证。0.4.24 及更早版本可正常自动升级。修复发布前已经安装旧 0.4.25 的电脑不会收到同版本自动更新，请手工下载本页安装包，在原目录覆盖安装一次；不要删除现有数据目录。Linux 与 Docker 0.4.25 资产未改动。</p>
+          <span class="kicker">Windows Release Hold · 2026-07-30</span>
+          <h3>Windows 0.4.25 已停止推荐和升级，Linux / Docker 不受影响</h3>
+          <p>Windows 0.4.25 的安装器错误地让系统服务通过框架依赖型入口启动，在未安装系统级 ASP.NET Core 8 的环境中会报 1053；失败后的回滚结果容易被误解为“没有解压文件”。同时，launcher 收到非 JSON 响应时可能退出。Windows 自动更新已设为 0，公开下载入口也已关闭。请保留现有数据目录，等待完成真实安装、升级和恢复验证后的 v0.4.26；不要重复运行旧安装包。Linux 与 Docker 0.4.25 不经过该 Windows 安装流程，继续正常提供。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/FusionCloud.Installer.exe">下载 Windows 0.4.25 修复版</a>
+          <span class="btn btn-ghost" aria-disabled="true">Windows 0.4.25 已暂停下载</span>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">下载 Linux 0.4.25</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.25">查看 Docker 分片</a>
         </div>
@@ -248,11 +248,11 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:#047857;">v0.4.25 修复版</small></h3>
-          <p>适用于 Windows 10/11、Windows Server 与云电脑。手工覆盖安装会识别原安装目录，遇到短暂文件占用时自动退出安装目录内的残留程序并重试，同时保留用户数据、现有设置和自定义桌面快捷方式图标。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/FusionCloud.Installer.exe">Gitee · Windows x64 安装包</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">Windows 修复安装包：84,724,504 bytes · SHA256：2166427bae4d6477d4d972af2e1477cda2edcd725f68733bedbd15356157e5fb<br>安全提示：当前安装包未提供 Authenticode 数字签名，Windows 可能显示安全提示；请只从本页链接下载并核对上述 SHA256。</p>
-          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">0.4.24 及更早版本可自动升级。修复发布前已经安装旧 0.4.25 的电脑会提示“已是最新版本”，必须手工下载，并保持安装器自动识别的原安装目录完成覆盖安装。</p>
+          <h3>Windows <small style="font-size:14px;color:#b45309;">v0.4.25 已暂停</small></h3>
+          <p>适用于 Windows 10/11、Windows Server 与云电脑的 0.4.25 安装包现已停止推荐。若安装失败，请不要删除现有数据目录，也不要继续反复覆盖安装；已经能正常使用的用户可保持当前状态，等待 v0.4.26 完成验证后再升级。</p>
+          <span class="btn btn-ghost btn-lg" style="width:100%;justify-content:center;" aria-disabled="true">Windows 下载暂时关闭</span>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">历史 Windows 0.4.25 安装包：84,724,504 bytes · SHA256：2166427bae4d6477d4d972af2e1477cda2edcd725f68733bedbd15356157e5fb（仅供识别问题文件，不代表当前可下载或推荐安装）。</p>
+          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">v0.4.26 将使用安装包内置的私有 .NET 8 运行时，不要求电脑另装系统级 .NET；恢复下载前会验证全新安装、失败后重装、旧版升级、服务启动、launcher、卸载与回退边界。</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -318,7 +318,7 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>安装方式</h4>
-        <div class="kv"><span>Windows</span><b>运行 0.4.25 修复安装包；旧 0.4.25 用户请保持安装器自动识别的原安装目录完成覆盖安装，不要删除现有数据目录</b></div>
+        <div class="kv"><span>Windows</span><b>0.4.25 手工下载与自动更新均已暂停；请保留现有数据目录并等待完成验证后的 v0.4.26</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.25_amd64.deb</code>（ARM64 请使用对应 arm64 文件）</b></div>
         <div class="kv"><span>Linux 脚本</span><b>下载与系统架构一致的 <code>install-linux-*.sh</code>，核对 SHA256 后执行</b></div>
         <div class="kv"><span>Docker 合并</span><b><code>cat fusioncloud-docker-0.4.25-amd64.tar.gz.part01 fusioncloud-docker-0.4.25-amd64.tar.gz.part02 &gt; fusioncloud-docker-0.4.25-amd64.tar.gz</code></b></div>
@@ -329,8 +329,8 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>0.4.25 发布范围与当前状态</h4>
-        <div class="kv"><span>Windows 手工升级</span><b>修复版已开放；覆盖安装可识别原目录，并对安装目录内的残留程序自动退出和重试</b></div>
-        <div class="kv"><span>Windows 自动更新</span><b>已全量开放给 0.4.24 及更早版本；旧 0.4.25 因同版本判断无法自动替换，需手工覆盖安装一次</b></div>
+        <div class="kv"><span>Windows 手工升级</span><b>已暂停；0.4.25 安装包可能在无系统级 .NET 8 的环境中安装失败，请勿反复重试</b></div>
+        <div class="kv"><span>Windows 自动更新</span><b>rollout 已设为 0；客户端不会再收到 0.4.25 升级推送</b></div>
         <div class="kv"><span>Linux / Docker</span><b>0.4.25 x64 / ARM64 资产继续正常开放，不受 Windows 安装流程问题影响</b></div>
         <div class="kv"><span>macOS</span><b>不属于本次 0.4.25 稳定版；页面下方只保留旧版 Apple Silicon 实验性预览入口</b></div>
         <div class="kv"><span>RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
@@ -459,7 +459,7 @@ mount --make-rshared /volume1/fusioncloud-media</code></pre>
         <details open><summary>FusionCloud 支持哪些网盘？</summary><p>目前支持天翼云盘、百度网盘、夸克网盘，后续将持续接入更多网盘服务。</p></details>
         <details><summary>支持对象存储吗？</summary><p>支持。FusionCloud 可挂载天翼云 ZOS / OOS、阿里云 OSS、AWS S3 及各类 S3 兼容对象存储（如 MinIO、Cloudflare R2），并陆续支持腾讯云 COS、华为云 OBS、WebDAV / SFTP 等，把存储桶当作本地磁盘直接读写。</p></details>
         <details><summary>挂载后会把所有文件下载到电脑上吗？图片缓存会占多少空间？</summary><p>不会。FusionCloud 按需读取文件，不会把整个网盘同步到本地。0.4.25 会为符合条件且已预览的图片保留本地缓存，默认清理 45 天未访问内容，容量上限 8 GiB，并在磁盘剩余空间接近 5 GiB 时停止继续写入；你可在设置中关闭、调整或立即清理。删除账号会清理该账号对应的缓存。普通文件删除不等同于取证安全擦除，详细说明请见<a href="privacy.html">隐私政策</a>。</p></details>
-        <details><summary>支持哪些操作系统？</summary><p>产品支持 Windows 10/11 与 Windows Server（2016 / 2019 / 2022 及更早的老版本，含天翼云电脑等云主机环境）、Linux 桌面端（Debian/Ubuntu/UOS 等，含 ARM64），以及 NAS / 服务器（Docker amd64 / arm64）。Windows 0.4.25 修复版已全量开放：0.4.24 及更早版本可自动升级；修复发布前已经安装旧 0.4.25 的电脑需从本页手工下载并在原目录覆盖安装一次。Linux 与 Docker 0.4.25 继续正常提供且资产未变。macOS 不属于本次稳定版，下载区仅保留旧版 <b>Apple Silicon 实验性预览</b>（未签名、需 macFUSE，挂载尚在打磨中）。移动端在规划中。</p></details>
+        <details><summary>支持哪些操作系统？</summary><p>产品支持 Windows 10/11 与 Windows Server（2016 / 2019 / 2022 及更早的老版本，含天翼云电脑等云主机环境）、Linux 桌面端（Debian/Ubuntu/UOS 等，含 ARM64），以及 NAS / 服务器（Docker amd64 / arm64）。Windows 0.4.25 手工下载和自动更新现已暂停，请等待完成真实安装与升级验证后的 v0.4.26；Linux 与 Docker 0.4.25 继续正常提供且资产未变。macOS 不属于本次稳定版，下载区仅保留旧版 <b>Apple Silicon 实验性预览</b>（未签名、需 macFUSE，挂载尚在打磨中）。移动端在规划中。</p></details>
         <details><summary>群晖 / 飞牛 / NAS 里看不到 Docker 挂载盘怎么办？</summary><p>Docker 版会按 NAS 容器环境默认选择 rclone，并在挂载前提示 <code>/media/MyCloud</code> 是否可写、是否只是容器内部目录、是否缺少共享传播。飞牛通常映射一个普通宿主目录即可；群晖必须先在 DSM「控制面板 → 共享文件夹」里创建 <code>fusioncloud-media</code>，给当前用户读写权限，并确认 File Station 能看到空共享文件夹，然后再执行 <code>mount --bind</code> / <code>mount --make-rshared</code> 和 Docker 启动命令。<code>/data</code> 只是配置、日志和缓存目录，不会显示云盘文件。</p></details>
         <details><summary>我的网盘账号和密码安全吗？</summary><p>账号登录凭证经过设备绑定加密后存储在你本机，仅本设备可解密，不会明文上传或共享。</p></details>
         <details><summary>现在收费吗？</summary><p>当前面向个人和 NAS 用户免费开放试用。多账号、跨盘和团队协作能力仍在规划与验证中，后续会先说明能力边界和适用场景，不影响当前免费试用。</p></details>
