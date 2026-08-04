@@ -231,16 +231,17 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p><b>v0.4.25</b> 的 Windows 手工下载与自动更新已暂停。我们确认该安装包在没有系统级 .NET 8 的电脑上可能无法启动挂载服务，失败恢复后还可能只留下诊断日志；launcher 也存在异常响应导致退出的问题。请不要继续安装或反复重试 Windows 0.4.25。修复将作为新的 Windows v0.4.26 发布，Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 的 0.4.25 资产不受影响。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
+        <p>Windows 下载已恢复，最新版本为 <b>v0.4.27</b>：安装包自带私有 .NET 8 运行时（不再要求电脑另装系统级 .NET），并修复了一类会导致上传文件静默丢失的严重缺陷。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产，不受 Windows 问题影响。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Release Hold · 2026-07-30</span>
-          <h3>Windows 0.4.25 已停止推荐和升级，Linux / Docker 不受影响</h3>
-          <p>Windows 0.4.25 的安装器错误地让系统服务通过框架依赖型入口启动，在未安装系统级 ASP.NET Core 8 的环境中会报 1053；失败后的回滚结果容易被误解为“没有解压文件”。同时，launcher 收到非 JSON 响应时可能退出。Windows 自动更新已设为 0，公开下载入口也已关闭。请保留现有数据目录，等待完成真实安装、升级和恢复验证后的 v0.4.26；不要重复运行旧安装包。Linux 与 Docker 0.4.25 不经过该 Windows 安装流程，继续正常提供。</p>
+          <span class="kicker">Windows Release · 2026-08-04</span>
+          <h3>Windows v0.4.27 已发布：修复上传文件静默丢失，下载恢复</h3>
+          <p><b>强烈建议所有 Windows 用户升级。</b>0.4.26 及更早版本存在一个严重缺陷：在向挂载盘批量复制文件时，部分文件可能<b>既没有真正上传到云端，界面上也不提示失败</b>——用户只有在事后翻找云盘时才会发现文件不见了。0.4.27 修复了造成该问题的两条路径，并让上传失败在传输面板中如实显示、一键重传不再谎报成功；同时修复了退出程序时正在写入的文件会被强行打断、以及关机/重启时弹出 sc.exe 错误框的问题。安装包自带私有 .NET 8 运行时，不再要求电脑另装系统级 .NET，也一并解决了 0.4.25 在无 .NET 环境下服务报 1053 的安装失败。</p>
+          <p style="margin-top:10px;">如果你正在使用 0.4.26 或更早版本，请升级后检查一次重要文件是否都已在云端；升级不会影响现有数据目录和已登录的账号。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <span class="btn btn-ghost" aria-disabled="true">Windows 0.4.25 已暂停下载</span>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.27/FusionCloud.Installer.exe">下载 Windows 0.4.27</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">下载 Linux 0.4.25</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.25">查看 Docker 分片</a>
         </div>
@@ -248,11 +249,11 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:#b45309;">v0.4.25 已暂停</small></h3>
-          <p>适用于 Windows 10/11、Windows Server 与云电脑的 0.4.25 安装包现已停止推荐。若安装失败，请不要删除现有数据目录，也不要继续反复覆盖安装；已经能正常使用的用户可保持当前状态，等待 v0.4.26 完成验证后再升级。</p>
-          <span class="btn btn-ghost btn-lg" style="width:100%;justify-content:center;" aria-disabled="true">Windows 下载暂时关闭</span>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">历史 Windows 0.4.25 安装包：84,724,504 bytes · SHA256：2166427bae4d6477d4d972af2e1477cda2edcd725f68733bedbd15356157e5fb（仅供识别问题文件，不代表当前可下载或推荐安装）。</p>
-          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">v0.4.26 将使用安装包内置的私有 .NET 8 运行时，不要求电脑另装系统级 .NET；恢复下载前会验证全新安装、失败后重装、旧版升级、服务启动、launcher、卸载与回退边界。</p>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.27</small></h3>
+          <p>适用于 Windows 10/11、Windows Server 与云电脑。安装包自带私有 .NET 8 运行时，电脑无需另装系统级 .NET。直接运行安装包即可覆盖升级旧版本，现有数据目录与已登录账号会保留。</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.27/FusionCloud.Installer.exe">下载 Windows 0.4.27</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · SHA256：51370762a7ce7dc6b990e67e244e9a2852ebba1d3d733552b8b5494ddb92b5fb</p>
+          <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">安装包未做代码签名，Windows SmartScreen 可能提示“未知发行商”，请对照上方 SHA256 校验后选择“更多信息 → 仍要运行”。</p>
         </div>
         <div class="card">
           <div class="ic">🐧</div>
@@ -318,7 +319,7 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>安装方式</h4>
-        <div class="kv"><span>Windows</span><b>0.4.25 手工下载与自动更新均已暂停；请保留现有数据目录并等待完成验证后的 v0.4.26</b></div>
+        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.27），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.25_amd64.deb</code>（ARM64 请使用对应 arm64 文件）</b></div>
         <div class="kv"><span>Linux 脚本</span><b>下载与系统架构一致的 <code>install-linux-*.sh</code>，核对 SHA256 后执行</b></div>
         <div class="kv"><span>Docker 合并</span><b><code>cat fusioncloud-docker-0.4.25-amd64.tar.gz.part01 fusioncloud-docker-0.4.25-amd64.tar.gz.part02 &gt; fusioncloud-docker-0.4.25-amd64.tar.gz</code></b></div>
@@ -328,12 +329,14 @@
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.25 发布范围与当前状态</h4>
-        <div class="kv"><span>Windows 手工升级</span><b>已暂停；0.4.25 安装包可能在无系统级 .NET 8 的环境中安装失败，请勿反复重试</b></div>
-        <div class="kv"><span>Windows 自动更新</span><b>rollout 已设为 0；客户端不会再收到 0.4.25 升级推送</b></div>
-        <div class="kv"><span>Linux / Docker</span><b>0.4.25 x64 / ARM64 资产继续正常开放，不受 Windows 安装流程问题影响</b></div>
-        <div class="kv"><span>macOS</span><b>不属于本次 0.4.25 稳定版；页面下方只保留旧版 Apple Silicon 实验性预览入口</b></div>
-        <div class="kv"><span>RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
+        <h4>0.4.27 修复内容与发布范围</h4>
+        <div class="kv"><span>上传静默丢失</span><b>已修复：删除或中断复制时，尚未上传的文件不再变成“云端没有、界面也不报错”的孤儿；缓存清理也不会再回收仍待上传的文件</b></div>
+        <div class="kv"><span>失败可见性</span><b>上传失败会在传输面板如实显示；一键重传在本地缓存确已丢失时会明确报错，不再谎报“已重新排队”</b></div>
+        <div class="kv"><span>退出与关机</span><b>退出程序时若仍有文件正在写入会提示等待，不再直接打断；关机/重启不再弹出 sc.exe 错误框</b></div>
+        <div class="kv"><span>安装环境</span><b>安装包自带私有 .NET 8 运行时，不要求电脑另装系统级 .NET（解决 0.4.25 的服务 1053 安装失败）</b></div>
+        <div class="kv"><span>Windows 自动更新</span><b>本版发布后重新开放；0.4.26 及更早版本建议尽快升级</b></div>
+        <div class="kv"><span>Linux / Docker</span><b>本次未同步更新，仍为 0.4.25 x64 / ARM64 资产，继续正常开放</b></div>
+        <div class="kv"><span>macOS / RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
       </div>
 
       <div class="panel" style="margin-top:28px;">
