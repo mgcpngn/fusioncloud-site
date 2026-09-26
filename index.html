@@ -232,17 +232,18 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>Windows 最新版本为 <b>v0.4.29</b>：首页「我的云盘」、云盘卡片、一键连接与设置分区全面重做，网页文件页升为一等入口，并修复了睡眠唤醒后自动恢复中断、升级安装偶发失败等历史遗留缺陷。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
+        <p>Windows 最新版本为 <b>v0.4.30</b>：同一云盘可以登录多个账号（天翼、百度、夸克），夸克改为页内扫码；天翼云盘大文件上传支持断点续传，并在上传前提示账号每日上传额度；断开、升级、卸载环节增加保护。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Release · 2026-09-11</span>
-          <h3>Windows v0.4.29 已发布：界面重做、网页文件页升为一等入口</h3>
-          <p>首页改为「我的云盘」：一个聚合状态加每张云盘卡片，运行信息折叠进「运行详情」；账号页由表格改为云盘卡片；侧栏「连接」改为一键，只需选账号；设置由 8 个标签页折叠为 5 个分区。网页文件页升为一等入口，支持「在本机文件管理器中打开」、相册视图与百度网盘视频在线播放；新增一键导出诊断包。天翼云盘在线下载首字节耗时下降 62%。</p>
-          <p style="margin-top:10px;">本版还修复了睡眠唤醒后部分云盘自动恢复被中断、以及升级安装偶发失败并自动回滚（升级改为先退出托盘再停止后台服务）的历史遗留缺陷，诊断日志也不再无限增长。升级不会影响现有数据目录和已登录的账号。</p>
+          <span class="kicker">Windows Release · 〔发布日期〕</span>
+          <h3>Windows v0.4.30 已发布：多账号登录、天翼大文件断点续传</h3>
+          <p><b>多账号：</b>天翼云盘、百度网盘、夸克网盘都能添加第二个、第三个账号，各自挂载成独立的盘、独立续期；扫错账号会拦下提示，不会串号。夸克打开卡片即出二维码，用夸克 App 扫码登录，二维码过期后手动点「刷新二维码」。</p>
+          <p style="margin-top:10px;"><b>天翼大文件上传稳了：</b>0.4.29 中几 GB 的文件常因上传地址过期在半途失败并整个重传（会员账号同样会遇到）；0.4.30 改为断网、睡眠、退出软件或断电后从没传完的部分接着传，也不再先复制整个文件。账号当日上传额度用完时，会明确说明是天翼云盘账号的限制、次日自动续传，并在上传前就提示今天放不下哪些文件。</p>
+          <p style="margin-top:10px;"><b>更稳更安全：</b>一次登录误报不再让自动续期停摆；限流后按账号冷却，不再越打越限；断开挂载前确认、手动断开的盘不再被自动挂回；升级后托盘自动回来；卸载前检查还有没有文件没上传。日常浏览、下载与 Office 编辑速度与 0.4.29 持平（发布前同机对照测试未检出差异）。升级不会影响现有数据目录和已登录的账号。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.29/FusionCloud.Installer.exe">下载 Windows 0.4.29</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.30/FusionCloud.Installer.exe">下载 Windows 0.4.30</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">下载 Linux 0.4.25</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.25">查看 Docker 分片</a>
         </div>
@@ -250,10 +251,10 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.29</small></h3>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.30</small></h3>
           <p>适用于 Windows 10/11、Windows Server 与云电脑。安装包自带私有 .NET 8 运行时，电脑无需另装系统级 .NET。直接运行安装包即可覆盖升级旧版本，现有数据目录与已登录账号会保留。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.29/FusionCloud.Installer.exe">下载 Windows 0.4.29</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · 86,638,784 bytes（82.6 MB）· SHA256：c070235df18e6cd13d0ad555361f4ba7f53d21fd734977c0e1251eb22eb97543</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.30/FusionCloud.Installer.exe">下载 Windows 0.4.30</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · 〔字节数〕 bytes（〔MB〕 MB）· SHA256：〔SHA256〕</p>
           <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">安装包使用自签名证书签名，Windows SmartScreen 仍可能提示“未知发行商”，请对照上方 SHA256 校验后选择“更多信息 → 仍要运行”。</p>
         </div>
         <div class="card">
@@ -320,7 +321,7 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>安装方式</h4>
-        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.29），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
+        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.30），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.25_amd64.deb</code>（ARM64 请使用对应 arm64 文件）</b></div>
         <div class="kv"><span>Linux 脚本</span><b>下载与系统架构一致的 <code>install-linux-*.sh</code>，核对 SHA256 后执行</b></div>
         <div class="kv"><span>Docker 合并</span><b><code>cat fusioncloud-docker-0.4.25-amd64.tar.gz.part01 fusioncloud-docker-0.4.25-amd64.tar.gz.part02 &gt; fusioncloud-docker-0.4.25-amd64.tar.gz</code></b></div>
@@ -330,16 +331,16 @@
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.29 更新内容与发布范围</h4>
-        <div class="kv"><span>首页</span><b>改为「我的云盘」：顶部一个聚合状态，每张卡片显示单个云盘的状态，原有运行信息折叠进「运行详情」</b></div>
-        <div class="kv"><span>云盘卡片</span><b>账号页由表格改为云盘卡片：图标、名称、盘符、状态一目了然，按当前状态最多显示 2 个主按钮</b></div>
-        <div class="kv"><span>一键连接</span><b>侧栏「连接」只需选账号，盘符与名称由程序分配；手动设过的自动连接与自定义名称照旧保留</b></div>
-        <div class="kv"><span>设置</span><b>由 8 个标签页折叠为 5 个分区，进阶参数改为按需展开</b></div>
-        <div class="kv"><span>网页文件页</span><b>升为一等入口：侧栏「文件」导航、「在本机文件管理器中打开」、相册视图、百度网盘视频在线播放</b></div>
-        <div class="kv"><span>诊断包</span><b>新增一键导出诊断包；诊断日志不再无限增长</b></div>
-        <div class="kv"><span>天翼下载</span><b>在线下载改为边收边发，首字节中位耗时下降 62%</b></div>
-        <div class="kv"><span>睡眠唤醒</span><b>已修复：唤醒后部分云盘自动恢复被中断，现已统一判定并恢复</b></div>
-        <div class="kv"><span>升级安装</span><b>已修复：升级改为先退出托盘程序再停止后台服务，不再因旧版托盘占住文件而失败回滚</b></div>
+        <h4>0.4.30 更新内容与发布范围（与 0.4.29 对比）</h4>
+        <div class="kv"><span>多账号</span><b>0.4.29：每个云盘只能登录一个账号 → 0.4.30：天翼、百度、夸克都能添加多个账号，各自独立挂载与续期，扫错账号会拦下不串号</b></div>
+        <div class="kv"><span>夸克登录</span><b>打开卡片自动出二维码，夸克 App 扫码登录；二维码过期后手动刷新，避免触发风控</b></div>
+        <div class="kv"><span>天翼大文件上传</span><b>0.4.29：上传地址约 15 分钟过期，几 GB 的文件常在半途失败并整个重传 → 0.4.30：断网、睡眠、退出或断电后从断点接着传，不再复制整个文件</b></div>
+        <div class="kv"><span>天翼上传额度</span><b>0.4.29：额度用完被误报「权限不足」并反复重传 → 0.4.30：明确说明是天翼云盘账号的限制、次日自动续传，上传前就提示今天放不下哪些文件</b></div>
+        <div class="kv"><span>百度上传</span><b>失败原因写清楚：空间已满、单文件超过会员等级上限，不再误报或只显示错误代码</b></div>
+        <div class="kv"><span>登录续期</span><b>一次误报不再让自动续期停摆；限流后按账号冷却（60 秒起、最长 15 分钟）并显示剩余时间</b></div>
+        <div class="kv"><span>断开与重连</span><b>断开前确认、有文件在传会再提醒；手动断开的盘不再被自动挂回；重连沿用原盘符</b></div>
+        <div class="kv"><span>升级与卸载</span><b>升级后托盘自动回来并清理旧网页资源；卸载前检查还有几个文件没上传，默认等上传完成</b></div>
+        <div class="kv"><span>速度</span><b>本版不是提速版本：浏览、下载与 Office 编辑速度与 0.4.29 持平（发布前同机对照测试未检出差异）</b></div>
         <div class="kv"><span>Linux / Docker</span><b>本次未同步更新，仍为 0.4.25 x64 / ARM64 资产，继续正常开放</b></div>
         <div class="kv"><span>macOS / RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
       </div>
