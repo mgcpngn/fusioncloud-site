@@ -257,18 +257,19 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>Windows 最新版本为 <b>v0.4.30</b>：同一云盘可以登录多个账号（天翼、百度、夸克），夸克改为页内扫码；天翼云盘大文件上传支持断点续传，并在上传前提示账号每日上传额度；断开、升级、卸载环节增加保护。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
+        <p>Windows 最新版本为 <b>v0.4.31</b>：云盘视频打开更快、拖动进度后约 1–2 秒恢复播放；专业版开始收费（月付 ¥4.9、年付首发 ¥39、终身早鸟 ¥128），人工收款后发放激活码；开机连接超时的云盘会自动重连，Office 未上传提示不再误报。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Release · 2026-09-26</span>
-          <h3>Windows v0.4.30 已发布：多账号登录、天翼大文件断点续传</h3>
-          <p><b>多账号：</b>天翼云盘、百度网盘、夸克网盘都能添加第二个、第三个账号，各自挂载成独立的盘、独立续期；扫错账号会拦下提示，不会串号。夸克打开卡片即出二维码，用夸克 App 扫码登录，二维码过期后手动点「刷新二维码」。</p>
-          <p style="margin-top:10px;"><b>天翼大文件上传稳了：</b>0.4.29 中几 GB 的文件常因上传地址过期在半途失败并整个重传（会员账号同样会遇到）；0.4.30 改为断网、睡眠、退出软件或断电后从没传完的部分接着传，也不再先复制整个文件。账号当日上传额度用完时，会明确说明是天翼云盘账号的限制、次日自动续传，并在上传前就提示今天放不下哪些文件。</p>
-          <p style="margin-top:10px;"><b>更稳更安全：</b>一次登录误报不再让自动续期停摆；限流后按账号冷却，不再越打越限；断开挂载前确认、手动断开的盘不再被自动挂回；升级后托盘自动回来；卸载前检查还有没有文件没上传。日常浏览、下载与 Office 编辑速度与 0.4.29 持平（发布前同机对照测试未检出差异）。升级不会影响现有数据目录和已登录的账号。</p>
+          <span class="kicker">Windows Release · 2026-10-06</span>
+          <h3>Windows v0.4.31 已发布：云盘视频更快打开、专业版开始收费</h3>
+          <p><b>视频播放更顺：</b>用 Windows「电影和电视」播放云盘里的高码率视频，修复前后实测首个画面等待由约 31.7 秒降到约 4.4 秒；拖动进度到 50% / 75% 后，由无法恢复改善为约 1.2 / 1.6 秒恢复播放，修复了已复现的长时间卡死和拖动后音画不同步。数据来自发布前同一台电脑的对照测试（天翼云盘、23.7 Mbps 的 1080p60 视频、每次测试前清除本机已下载内容），不代表所有视频和网络条件都能达到同样效果。</p>
+          <p style="margin-top:10px;"><b>专业版开始收费：</b>月付 ¥4.9；年付首发 ¥39（正式价 ¥49）；终身早鸟 ¥128（正式价 ¥168）。人工收款，付款后由客服发放激活码，在软件内兑换即可。授权绑定当前电脑，换电脑可联系客服迁移；月付、年付按精确一个月、一年计算，未到期续费从原到期日往后叠加。</p>
+          <p style="margin-top:10px;"><b>更稳更省心：</b>首次打开云盘文件遇到网络抖动时会自动重试，不再一次失败就报错；开机连接超时的云盘会按 1、5、30 分钟间隔自动重连；Office 编辑时「有未上传文件」的提示不再误报；升级提示里能直接看到本次更新要点。升级不会影响现有数据目录和已登录的账号。</p>
+          <p style="margin-top:10px;font-size:13px;color:var(--ink-faint);"><b>已知限制：</b>百度网盘非会员账号的下载速度由百度限制（实测约 25–45 KB/s），首次打开大文件或视频可能要等待数十秒，与 0.4.30 同等条件对照无差异；云盘单连接速度接近视频码率时（例如天翼云盘播放 20 Mbps 以上视频），仍可能偶有短暂卡顿，后续版本继续改善。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.30/FusionCloud.Installer.exe">下载 Windows 0.4.30</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.31/FusionCloud.Installer.exe">下载 Windows 0.4.31</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">下载 Linux 0.4.25</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.25">查看 Docker 分片</a>
         </div>
@@ -276,10 +277,10 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.30</small></h3>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.31</small></h3>
           <p>适用于 Windows 10/11、Windows Server 与云电脑。安装包自带私有 .NET 8 运行时，电脑无需另装系统级 .NET。直接运行安装包即可覆盖升级旧版本，现有数据目录与已登录账号会保留。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.30/FusionCloud.Installer.exe">下载 Windows 0.4.30</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · 86,737,976 bytes（82.7 MB）· SHA256：c615c4dddd6ac5b38d28eb5d9889bd05a816efc33803064347f68407bf4b2c30</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.31/FusionCloud.Installer.exe">下载 Windows 0.4.31</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · {{SIZE_BYTES}} bytes（{{SIZE_MB}} MB）· SHA256：{{SHA256}}</p>
           <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">安装包使用自签名证书签名，Windows SmartScreen 仍可能提示“未知发行商”，请对照上方 SHA256 校验后选择“更多信息 → 仍要运行”。</p>
         </div>
         <div class="card">
@@ -346,7 +347,7 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>安装方式</h4>
-        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.30），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
+        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.31），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.25_amd64.deb</code>（ARM64 请使用对应 arm64 文件）</b></div>
         <div class="kv"><span>Linux 脚本</span><b>下载与系统架构一致的 <code>install-linux-*.sh</code>，核对 SHA256 后执行</b></div>
         <div class="kv"><span>Docker 合并</span><b><code>cat fusioncloud-docker-0.4.25-amd64.tar.gz.part01 fusioncloud-docker-0.4.25-amd64.tar.gz.part02 &gt; fusioncloud-docker-0.4.25-amd64.tar.gz</code></b></div>
@@ -356,16 +357,18 @@
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.30 更新内容与发布范围（与 0.4.29 对比）</h4>
-        <div class="kv"><span>多账号</span><b>0.4.29：每个云盘只能登录一个账号 → 0.4.30：天翼、百度、夸克都能添加多个账号，各自独立挂载与续期，扫错账号会拦下不串号</b></div>
-        <div class="kv"><span>夸克登录</span><b>打开卡片自动出二维码，夸克 App 扫码登录；二维码过期后手动刷新，避免触发风控</b></div>
-        <div class="kv"><span>天翼大文件上传</span><b>0.4.29：上传地址约 15 分钟过期，几 GB 的文件常在半途失败并整个重传 → 0.4.30：断网、睡眠、退出或断电后从断点接着传，不再复制整个文件</b></div>
-        <div class="kv"><span>天翼上传额度</span><b>0.4.29：额度用完被误报「权限不足」并反复重传 → 0.4.30：明确说明是天翼云盘账号的限制、次日自动续传，上传前就提示今天放不下哪些文件</b></div>
-        <div class="kv"><span>百度上传</span><b>失败原因写清楚：空间已满、单文件超过会员等级上限，不再误报或只显示错误代码</b></div>
-        <div class="kv"><span>登录续期</span><b>一次误报不再让自动续期停摆；限流后按账号冷却（60 秒起、最长 15 分钟）并显示剩余时间</b></div>
-        <div class="kv"><span>断开与重连</span><b>断开前确认、有文件在传会再提醒；手动断开的盘不再被自动挂回；重连沿用原盘符</b></div>
-        <div class="kv"><span>升级与卸载</span><b>升级后托盘自动回来并清理旧网页资源；卸载前检查还有几个文件没上传，默认等上传完成</b></div>
-        <div class="kv"><span>速度</span><b>本版不是提速版本：浏览、下载与 Office 编辑速度与 0.4.29 持平（发布前同机对照测试未检出差异）</b></div>
+        <h4>0.4.31 更新内容与发布范围（与 0.4.30 对比）</h4>
+        <div class="kv"><span>视频打开</span><b>0.4.30：尚未包含本次视频专项修复 → 0.4.31：高码率视频首个画面等待由约 31.7 秒降到约 4.4 秒（修复前后同机对照实测）</b></div>
+        <div class="kv"><span>拖动进度</span><b>0.4.30：拖动后可能长时间卡死 → 0.4.31：拖到 50% / 75% 后约 1.2 / 1.6 秒恢复播放；约 55 秒播放窗口内画面冻结累计由约 37 秒降到约 9 秒</b></div>
+        <div class="kv"><span>测试条件</span><b>Windows「电影和电视」、天翼云盘、23.7 Mbps 的 1080p60 视频，每次测试前清除本机已下载内容；特定视频和网络条件下的结果，不代表所有视频都能同样快，也不代表完全没有短暂卡顿</b></div>
+        <div class="kv"><span>专业版价格</span><b>0.4.30：尚未收费 → 0.4.31：月付 ¥4.9；年付首发 ¥39（正式价 ¥49）；终身早鸟 ¥128（正式价 ¥168）</b></div>
+        <div class="kv"><span>购买与激活</span><b>人工收款后由客服发放激活码，在软件内兑换；授权绑定当前电脑，换电脑可联系客服迁移，迁移后保留原到期日</b></div>
+        <div class="kv"><span>续费计算</span><b>0.4.30：月付、年付到期时间可能延长到月末、年末 → 0.4.31：按精确一个月 / 一年计算，未到期续费从原到期日叠加</b></div>
+        <div class="kv"><span>网络抖动</span><b>0.4.30：首次打开文件遇到一次临时失败就可能报错 → 0.4.31：自动有限次数重试，从没读完的位置继续</b></div>
+        <div class="kv"><span>Office 提示</span><b>0.4.30：软件自身的记录文件可能被算成「未上传文档」→ 0.4.31：只提示确实需要处理的文件</b></div>
+        <div class="kv"><span>开机连接</span><b>0.4.30：连接超时后需要手动连接 → 0.4.31：按 1、5、30 分钟间隔自动重连；手动断开或登录失效的云盘不会被强行连回</b></div>
+        <div class="kv"><span>升级提示</span><b>新版本提示同时显示本次更新要点，并可查看完整说明</b></div>
+        <div class="kv"><span>已知限制</span><b>百度网盘非会员账号下载速度由百度限制（实测约 25–45 KB/s），首次打开大文件或视频要等数十秒，与 0.4.30 无差异；云盘单连接速度接近视频码率时（如天翼云盘播放 20 Mbps 以上视频）仍可能偶有短暂卡顿</b></div>
         <div class="kv"><span>Linux / Docker</span><b>本次未同步更新，仍为 0.4.25 x64 / ARM64 资产，继续正常开放</b></div>
         <div class="kv"><span>macOS / RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
       </div>
