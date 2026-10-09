@@ -257,19 +257,18 @@
       <div class="section-head">
         <span class="kicker">Download</span>
         <h2>下载 FusionCloud</h2>
-        <p>Windows 最新版本为 <b>v0.4.31</b>：云盘视频打开更快、拖动进度后约 1–2 秒恢复播放；专业版开始收费（月付 ¥4.9、年付首发 ¥39、终身早鸟 ¥128），人工收款后发放激活码；开机连接超时的云盘会自动重连，Office 未上传提示不再误报。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
+        <p>Windows 最新版本为 <b>v0.4.32</b>：修复上传途中移动、改名或删到回收站文件夹后文件一直上传失败且无法取消的问题，重启后给未上传文件改名不再丢失内容；已经卡住的文件可以「放弃上传（先保存到本机）」，托盘不再反复弹出上传失败提示。Linux x64 / ARM64 与 NAS / Docker amd64 / arm64 本次未同步更新，仍为 0.4.25 资产。Docker 完整包超过 Gitee 单附件限制，请按架构下载两个分片后合并校验。</p>
       </div>
       <div class="release-notice">
         <div>
-          <span class="kicker">Windows Release · 2026-10-06</span>
-          <h3>Windows v0.4.31 已发布：云盘视频更快打开、专业版开始收费</h3>
-          <p><b>视频播放更顺：</b>用 Windows「电影和电视」播放云盘里的高码率视频，修复前后实测首个画面等待由约 31.7 秒降到约 4.4 秒；拖动进度到 50% / 75% 后，由无法恢复改善为约 1.2 / 1.6 秒恢复播放，修复了已复现的长时间卡死和拖动后音画不同步。数据来自发布前同一台电脑的对照测试（天翼云盘、23.7 Mbps 的 1080p60 视频、每次测试前清除本机已下载内容），不代表所有视频和网络条件都能达到同样效果。</p>
-          <p style="margin-top:10px;"><b>专业版开始收费：</b>月付 ¥4.9；年付首发 ¥39（正式价 ¥49）；终身早鸟 ¥128（正式价 ¥168）。人工收款，付款后由客服发放激活码，在软件内兑换即可。授权绑定当前电脑，换电脑可联系客服迁移；月付、年付按精确一个月、一年计算，未到期续费从原到期日往后叠加。</p>
-          <p style="margin-top:10px;"><b>更稳更省心：</b>首次打开云盘文件遇到网络抖动时会自动重试，不再一次失败就报错；开机连接超时的云盘会按 1、5、30 分钟间隔自动重连；Office 编辑时「有未上传文件」的提示不再误报；升级提示里能直接看到本次更新要点。升级不会影响现有数据目录和已登录的账号。</p>
-          <p style="margin-top:10px;font-size:13px;color:var(--ink-faint);"><b>已知限制：</b>百度网盘非会员账号的下载速度由百度限制（实测约 25–45 KB/s），首次打开大文件或视频可能要等待数十秒，与 0.4.30 同等条件对照无差异；云盘单连接速度接近视频码率时（例如天翼云盘播放 20 Mbps 以上视频），仍可能偶有短暂卡顿，后续版本继续改善。</p>
+          <span class="kicker">Windows Release · 2026-10-09</span>
+          <h3>Windows v0.4.32 已发布：上传途中整理文件夹不再让文件卡住，卡住的上传可以安全取消</h3>
+          <p><b>数据安全修复：</b>文件还没上传完时移动、改名或把文件夹删除到回收站，里面的文件以前会一直显示上传失败且无法取消；现在文件会跟着文件夹一起移动并在新位置继续上传，删到回收站的文件暂停上传、还原后继续。重启电脑后给还没上传的文件改名，内容也不再丢失。</p>
+          <p style="margin-top:10px;"><b>卡住的上传可以安全取消：</b>新增「放弃上传（先保存到本机）」：先把本机内容完整保存到「公共文档\FusionCloud\未上传文件」并校验，再从上传队列中移除，支持批量处理。失败原因会写明是云端哪个文件夹已不存在；同一批失败托盘只提示一次。</p>
+          <p style="margin-top:10px;font-size:13px;color:var(--ink-faint);"><b>已知限制：</b>升级前已经卡住的文件，升级后仍显示为失败，请在「设置 → 写入问题」中放弃上传（先保存到本机）或在云端重建文件夹后重试；这些文件在清理前每次开机最多提示一次。删除保存下来的文件夹时 Windows 会要求管理员确认。百度网盘非会员下载速度由百度限制（实测约 25–45 KB/s）。</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.31/FusionCloud.Installer.exe">下载 Windows 0.4.31</a>
+          <a class="btn btn-primary" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.32/FusionCloud.Installer.exe">下载 Windows 0.4.32</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.25/mycloud_0.4.25_amd64.deb">下载 Linux 0.4.25</a>
           <a class="btn btn-ghost" href="https://gitee.com/firepython/mycloud/releases/v0.4.25">查看 Docker 分片</a>
         </div>
@@ -277,10 +276,10 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="ic">🪟</div>
-          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.31</small></h3>
+          <h3>Windows <small style="font-size:14px;color:var(--ink-faint);">v0.4.32</small></h3>
           <p>适用于 Windows 10/11、Windows Server 与云电脑。安装包自带私有 .NET 8 运行时，电脑无需另装系统级 .NET。直接运行安装包即可覆盖升级旧版本，现有数据目录与已登录账号会保留。</p>
-          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.31/FusionCloud.Installer.exe">下载 Windows 0.4.31</a>
-          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · 86,824,536 bytes（82.8 MB）· SHA256：6f57cbe8520dae3ed0861b651b46b1de1c2d7667ec06b970c3306ddb6f4706de</p>
+          <a class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" href="https://gitee.com/firepython/mycloud/releases/download/v0.4.32/FusionCloud.Installer.exe">下载 Windows 0.4.32</a>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--ink-faint);word-break:break-all;">FusionCloud.Installer.exe · 86,872,152 bytes（82.8 MB）· SHA256：8d0714a5df5417b8f9b4e0a4d21e671c730370f4629940c293fed4750b237186</p>
           <p style="font-size:12px;color:var(--ink-faint);margin:10px 0 0;">安装包使用自签名证书签名，Windows SmartScreen 仍可能提示“未知发行商”，请对照上方 SHA256 校验后选择“更多信息 → 仍要运行”。</p>
         </div>
         <div class="card">
@@ -347,7 +346,7 @@
 
       <div class="panel" style="margin-top:28px;">
         <h4>安装方式</h4>
-        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.31），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
+        <div class="kv"><span>Windows</span><b>下载 <code>FusionCloud.Installer.exe</code>（v0.4.32），核对 SHA256 后直接运行；可直接覆盖升级旧版本</b></div>
         <div class="kv"><span>Linux (.deb)</span><b><code>sudo apt install ./mycloud_0.4.25_amd64.deb</code>（ARM64 请使用对应 arm64 文件）</b></div>
         <div class="kv"><span>Linux 脚本</span><b>下载与系统架构一致的 <code>install-linux-*.sh</code>，核对 SHA256 后执行</b></div>
         <div class="kv"><span>Docker 合并</span><b><code>cat fusioncloud-docker-0.4.25-amd64.tar.gz.part01 fusioncloud-docker-0.4.25-amd64.tar.gz.part02 &gt; fusioncloud-docker-0.4.25-amd64.tar.gz</code></b></div>
@@ -357,18 +356,13 @@
       </div>
 
       <div class="panel" style="margin-top:28px;">
-        <h4>0.4.31 更新内容与发布范围（与 0.4.30 对比）</h4>
-        <div class="kv"><span>视频打开</span><b>0.4.30：尚未包含本次视频专项修复 → 0.4.31：高码率视频首个画面等待由约 31.7 秒降到约 4.4 秒（修复前后同机对照实测）</b></div>
-        <div class="kv"><span>拖动进度</span><b>0.4.30：拖动后可能长时间卡死 → 0.4.31：拖到 50% / 75% 后约 1.2 / 1.6 秒恢复播放；约 55 秒播放窗口内画面冻结累计由约 37 秒降到约 9 秒</b></div>
-        <div class="kv"><span>测试条件</span><b>Windows「电影和电视」、天翼云盘、23.7 Mbps 的 1080p60 视频，每次测试前清除本机已下载内容；特定视频和网络条件下的结果，不代表所有视频都能同样快，也不代表完全没有短暂卡顿</b></div>
-        <div class="kv"><span>专业版价格</span><b>0.4.30：尚未收费 → 0.4.31：月付 ¥4.9；年付首发 ¥39（正式价 ¥49）；终身早鸟 ¥128（正式价 ¥168）</b></div>
-        <div class="kv"><span>购买与激活</span><b>人工收款后由客服发放激活码，在软件内兑换；授权绑定当前电脑，换电脑可联系客服迁移，迁移后保留原到期日</b></div>
-        <div class="kv"><span>续费计算</span><b>0.4.30：月付、年付到期时间可能延长到月末、年末 → 0.4.31：按精确一个月 / 一年计算，未到期续费从原到期日叠加</b></div>
-        <div class="kv"><span>网络抖动</span><b>0.4.30：首次打开文件遇到一次临时失败就可能报错 → 0.4.31：自动有限次数重试，从没读完的位置继续</b></div>
-        <div class="kv"><span>Office 提示</span><b>0.4.30：软件自身的记录文件可能被算成「未上传文档」→ 0.4.31：只提示确实需要处理的文件</b></div>
-        <div class="kv"><span>开机连接</span><b>0.4.30：连接超时后需要手动连接 → 0.4.31：按 1、5、30 分钟间隔自动重连；手动断开或登录失效的云盘不会被强行连回</b></div>
-        <div class="kv"><span>升级提示</span><b>新版本提示同时显示本次更新要点，并可查看完整说明</b></div>
-        <div class="kv"><span>已知限制</span><b>百度网盘非会员账号下载速度由百度限制（实测约 25–45 KB/s），首次打开大文件或视频要等数十秒，与 0.4.30 无差异；云盘单连接速度接近视频码率时（如天翼云盘播放 20 Mbps 以上视频）仍可能偶有短暂卡顿</b></div>
+        <h4>0.4.32 更新内容与发布范围（与 0.4.31 对比）</h4>
+        <div class="kv"><span>整理文件夹</span><b>0.4.31：上传途中移动、改名或删到回收站文件夹，里面未上传的文件全部失败且无法取消 → 0.4.32：文件跟着文件夹一起移动并在新位置继续上传；删到回收站的文件暂停上传，还原后继续</b></div>
+        <div class="kv"><span>重启后改名</span><b>0.4.31：重启后给未上传文件改名，新名字可能读不到原内容、下次启动又按旧名字传回云端 → 0.4.32：内容跟着新名字走并按新名字上传</b></div>
+        <div class="kv"><span>取消卡住的上传</span><b>0.4.31：云端没有副本的失败文件只能「重试」且必然再失败 → 0.4.32：「放弃上传（先保存到本机）」先完整保存到「公共文档\FusionCloud\未上传文件」并校验，再移出上传队列，可批量处理</b></div>
+        <div class="kv"><span>托盘提示</span><b>0.4.31：失败较多时同一批失败会反复弹出提示 → 0.4.32：同一批失败只提示一次，失败数增加时才再提示</b></div>
+        <div class="kv"><span>失败原因</span><b>0.4.31：显示为笼统的「不存在」 → 0.4.32：写明云端哪个文件夹已不存在；列目录时的临时网络问题自动重试</b></div>
+        <div class="kv"><span>已知限制</span><b>升级前已卡住的文件需在「设置 → 写入问题」中放弃上传（先保存到本机）或在云端重建文件夹后重试，清理前每次开机最多提示一次；删除保存下来的文件夹需要管理员确认；百度网盘非会员下载速度由百度限制</b></div>
         <div class="kv"><span>Linux / Docker</span><b>本次未同步更新，仍为 0.4.25 x64 / ARM64 资产，继续正常开放</b></div>
         <div class="kv"><span>macOS / RPM</span><b>本次不发布；Linux 用户请使用 .deb、tar.gz 或对应架构的安装脚本</b></div>
       </div>
